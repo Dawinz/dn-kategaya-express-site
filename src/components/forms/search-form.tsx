@@ -6,7 +6,6 @@ import { MapPin, Calendar, Users, CreditCard } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import Script from "next/script"
 
 // Type declaration for SafariPlus
 declare global {
@@ -202,16 +201,7 @@ export function SearchForm() {
         </div>
       )}
 
-      {/* SafariPlus Scripts */}
-      <Script
-        src="https://demo.safariyetu.com/safariplus/v1/safariplus.js"
-        strategy="afterInteractive"
-        onLoad={() => {
-          // SafariPlus script loaded, ready to initialize when form is submitted
-          console.log("SafariPlus script loaded successfully");
-        }}
-      />
-      <link rel="stylesheet" href="https://demo.safariyetu.com/safariplus/v1/safariplus.css" />
+
     </div>
   )
 }
