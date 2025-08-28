@@ -37,9 +37,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* SafariPlus Plugin Assets - Global */}
-        <link rel="stylesheet" href="https://demo.safariyetu.com/safariplus/v1/safariplus.css" />
-        <script src="https://demo.safariyetu.com/safariplus/v1/safariplus.js" defer></script>
+        {/* SafariPlus Plugin Assets - Production */}
+        <link rel="stylesheet" href="https://safariyetu.com/safariplus/v1/safariplus.css" />
+        <script src="https://safariyetu.com/safariplus/v1/safariplus.js" defer></script>
       </head>
       <body className={inter.className}>
         <div className="min-h-screen flex flex-col">
