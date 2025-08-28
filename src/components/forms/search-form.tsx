@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from "react"
-
 import { MapPin, Calendar, Users, CreditCard } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -41,19 +40,15 @@ export function SearchForm() {
     date: "",
     passengers: "1"
   })
-  const [showBooking, setShowBooking] = useState(false)
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     
-    // Show the SafariPlus booking widget immediately
-    setShowBooking(true)
-    
-    // Initialize SafariPlus with the search parameters
+    // Initialize SafariPlus modal overlay directly
     if (typeof window !== 'undefined' && window.SafariPlus) {
       window.SafariPlus.init({
         operatorId: "2898390482",
-        elementId: "safariplus-booking-widget",
+        elementId: "safariplus-modal", // This will be the modal overlay
         language: "en",
         currency: "TZS",
         theme: {
@@ -180,28 +175,8 @@ export function SearchForm() {
         </div>
       </form>
 
-      {/* SafariPlus Booking Widget */}
-      {showBooking && (
-        <div className="mt-8">
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
-            <h3 className="text-lg font-semibold text-blue-900 mb-2">
-              SafariPlus Booking
-            </h3>
-            <p className="text-blue-800 mb-4">
-              Complete your booking with seat selection and payment below.
-            </p>
-          </div>
-
-          <div id="safariplus-booking-widget" className="min-h-[600px] bg-white border-2 border-gray-200 rounded-lg p-8">
-            <div className="text-center text-gray-500">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-red mx-auto mb-4"></div>
-              <p>Loading SafariPlus booking widget...</p>
-            </div>
-          </div>
-        </div>
-      )}
-
-
+      {/* Hidden container for SafariPlus modal overlay */}
+      <div id="safariplus-modal" className="hidden"></div>
     </div>
   )
 }
