@@ -1,0 +1,276 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+const Footer = () => {
+  return (
+    <footer style={{
+      background: '#1a1a1a',
+      color: 'white',
+      padding: '3rem 0 1rem 0'
+    }}>
+      <div style={{
+        maxWidth: '1200px',
+        margin: '0 auto',
+        padding: '0 2rem'
+      }}>
+        {/* Main Footer Content */}
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+          gap: '2rem',
+          marginBottom: '2rem'
+        }}>
+          
+          {/* Company Info Section */}
+          <div style={{ gridColumn: 'span 2' }}>
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '1rem',
+              marginBottom: '1rem'
+            }}>
+              <img
+                src="/images/logo.jpeg"
+                alt="DN Kategaya Express Logo"
+                style={{
+                  width: '50px',
+                  height: '50px',
+                  borderRadius: '8px',
+                  objectFit: 'cover'
+                }}
+              />
+              <div>
+                <h3 style={{
+                  fontSize: '1.5rem',
+                  fontWeight: 'bold',
+                  background: 'linear-gradient(135deg, #E10600, #FFD700, #0057FF)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                  margin: 0
+                }}>
+                  DN Kategaya Express
+                </h3>
+                <p style={{ fontSize: '0.8rem', color: '#999', margin: 0 }}>
+                  Your Journey, Our Priority
+                </p>
+              </div>
+            </div>
+            <p style={{
+              color: '#ccc',
+              fontWeight: 500,
+              marginBottom: '1rem',
+              fontSize: '1.1rem'
+            }}>
+              Premium Journeys, Easy Tickets
+            </p>
+            <p style={{
+              color: '#999',
+              fontSize: '0.9rem',
+              lineHeight: 1.6
+            }}>
+              Experience premium bus travel across Tanzania with our modern fleet, professional drivers, and exceptional service. Your comfort and safety are our top priorities.
+            </p>
+          </div>
+
+          {/* Quick Links Section */}
+          <div>
+            <h4 style={{
+              fontSize: '1.1rem',
+              fontWeight: 'bold',
+              marginBottom: '1rem',
+              color: '#FFD700'
+            }}>
+              Quick Links
+            </h4>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+              <li style={{ marginBottom: '0.5rem' }}>
+                <Link to="/" style={{
+                  color: '#ccc',
+                  textDecoration: 'none',
+                  transition: 'color 0.3s'
+                }}>
+                  Home
+                </Link>
+              </li>
+              <li style={{ marginBottom: '0.5rem' }}>
+                <Link to="/routes" style={{
+                  color: '#ccc',
+                  textDecoration: 'none',
+                  transition: 'color 0.3s'
+                }}>
+                  Routes
+                </Link>
+              </li>
+              <li style={{ marginBottom: '0.5rem' }}>
+                <Link to="/gallery" style={{
+                  color: '#ccc',
+                  textDecoration: 'none',
+                  transition: 'color 0.3s'
+                }}>
+                  Gallery
+                </Link>
+              </li>
+              <li style={{ marginBottom: '0.5rem' }}>
+                <Link to="/contact" style={{
+                  color: '#ccc',
+                  textDecoration: 'none',
+                  transition: 'color 0.3s'
+                }}>
+                  Contact
+                </Link>
+              </li>
+              <li style={{ marginBottom: '0.5rem' }}>
+                <Link to="/book" style={{
+                  color: '#ccc',
+                  textDecoration: 'none',
+                  transition: 'color 0.3s'
+                }}>
+                  Book Now
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact Info Section */}
+          <div>
+            <h4 style={{
+              fontSize: '1.1rem',
+              fontWeight: 'bold',
+              marginBottom: '1rem',
+              color: '#FFD700'
+            }}>
+              Contact Info
+            </h4>
+            <div style={{ fontSize: '0.9rem' }}>
+              {/* Phone */}
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.5rem',
+                marginBottom: '0.75rem'
+              }}>
+                <svg style={{ width: '16px', height: '16px', fill: '#FFD700' }} viewBox="0 0 24 24">
+                  <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                </svg>
+                <a href="tel:+255755478744" style={{
+                  color: '#ccc',
+                  textDecoration: 'none',
+                  transition: 'color 0.3s'
+                }}>
+                  +255 755 478 744
+                </a>
+              </div>
+
+              {/* Email */}
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.5rem',
+                marginBottom: '0.75rem'
+              }}>
+                <svg style={{ width: '16px', height: '16px', fill: '#FFD700' }} viewBox="0 0 24 24">
+                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+                <a href="mailto:info@dnkategayaexpress.com" style={{
+                  color: '#ccc',
+                  textDecoration: 'none',
+                  transition: 'color 0.3s'
+                }}>
+                  info@dnkategayaexpress.com
+                </a>
+              </div>
+
+              {/* Location */}
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.5rem',
+                marginBottom: '0.75rem'
+              }}>
+                <svg style={{ width: '16px', height: '16px', fill: '#FFD700' }} viewBox="0 0 24 24">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+                <span style={{ color: '#ccc' }}>
+                  Dar es Salaam, Tanzania
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Social Media & Bottom Section */}
+        <div style={{
+          borderTop: '1px solid #333',
+          paddingTop: '2rem'
+        }}>
+          <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '1rem',
+            alignItems: 'center'
+          }}>
+            
+            {/* Social Media Links */}
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '1rem'
+            }}>
+              <span style={{ color: '#999', fontSize: '0.9rem' }}>Follow Us:</span>
+              
+              {/* WhatsApp */}
+              <a 
+                href="https://wa.me/255755478744" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={{
+                  color: '#25D366',
+                  fontSize: '1.5rem',
+                  transition: 'transform 0.3s'
+                }}
+              >
+                📱
+              </a>
+              
+              {/* Facebook */}
+              <a 
+                href="https://facebook.com/dnkategayaexpress" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={{
+                  color: '#1877F2',
+                  fontSize: '1.5rem',
+                  transition: 'transform 0.3s'
+                }}
+              >
+                📘
+              </a>
+              
+              {/* Instagram */}
+              <a 
+                href="https://instagram.com/dnkategayaexpress" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={{
+                  color: '#E4405F',
+                  fontSize: '1.5rem',
+                  transition: 'transform 0.3s'
+                }}
+              >
+                📷
+              </a>
+            </div>
+            
+            {/* Copyright */}
+            <div style={{ color: '#999', fontSize: '0.9rem' }}>
+              © {new Date().getFullYear()} DN Kategaya Express. All rights reserved.
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

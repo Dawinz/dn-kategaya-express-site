@@ -1,0 +1,12 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/page": "app/page.js",
+  "/policy/privacy/page": "app/policy/privacy/page.js",
+  "/policy/refund/page": "app/policy/refund/page.js",
+  "/policy/terms/page": "app/policy/terms/page.js",
+  "/robots.txt/route": "app/robots.txt/route.js",
+  "/sitemap.xml/route": "app/sitemap.xml/route.js",
+  "/support/page": "app/support/page.js",
+  "/tickets/[reference]/page": "app/tickets/[reference]/page.js"
+}

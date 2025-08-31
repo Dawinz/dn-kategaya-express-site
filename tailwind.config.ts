@@ -1,29 +1,32 @@
-import type { Config } from "tailwindcss";
-
-const config: Config = {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
     extend: {
       colors: {
-        // DN Kategaya brand colors
+        // DN Kategaya Express brand colors
         primary: {
-          red: "#E10600",
-          yellow: "#FFD700",
-          blue: "#0057FF",
-          black: "#000000",
-          white: "#FFFFFF",
+          red: '#E10600',      // DN Kategaya red
+          yellow: '#FFD700',   // DN Kategaya yellow
+          blue: '#0057FF',     // DN Kategaya blue
+          black: '#000000',    // DN Kategaya black
+          white: '#FFFFFF',    // DN Kategaya white
         },
+        // Legacy zuberi colors for backward compatibility
+        zuberi: {
+          navy: '#1A1C5A',
+          red: '#E10600',      // Updated to DN Kategaya red
+          silver: '#D4D4D4',
+          lime: '#FFD700',     // Updated to DN Kategaya yellow
+        }
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-      },
+        'poppins': ['Poppins', 'sans-serif'],
+        'bebas': ['Bebas Neue', 'sans-serif'],
+      }
     },
   },
   plugins: [],
-};
-
-export default config;
+}
