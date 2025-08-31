@@ -30,7 +30,7 @@ const Footer = () => {
               marginBottom: '1rem'
             }}>
               <img
-                src={`${process.env.PUBLIC_URL}/images/logo.jpeg`}
+                src={`${window.location.origin}/images/logo.jpeg`}
                 alt="DN Kategaya Express Logo"
                 style={{
                   width: '50px',

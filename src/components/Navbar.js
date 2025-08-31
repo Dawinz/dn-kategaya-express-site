@@ -24,7 +24,7 @@ const Navbar = () => {
         {/* Logo */}
         <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '1rem' }}>
           <img
-            src={`${process.env.PUBLIC_URL}/images/logo.jpeg`}
+            src={`${window.location.origin}/images/logo.jpeg`}
             alt="DN Kategaya Express Logo"
             style={{
               width: '50px',

@@ -221,7 +221,7 @@ const Home = ({ setIsBookingDialogOpen }) => {
               boxShadow: '0 5px 15px rgba(0,0,0,0.1)'
             }}>
               <img
-                src={`${process.env.PUBLIC_URL}/images/WhatsApp Image 2025-08-23 at 20.33.00.jpeg`}
+                src={`${window.location.origin}/images/WhatsApp Image 2025-08-23 at 20.33.00.jpeg`}
                 alt="DN Kategaya Express Bus"
                 style={{
                   width: '100%',
@@ -237,7 +237,7 @@ const Home = ({ setIsBookingDialogOpen }) => {
               boxShadow: '0 5px 15px rgba(0,0,0,0.1)'
             }}>
               <img
-                src={`${process.env.PUBLIC_URL}/images/WhatsApp Image 2025-08-23 at 20.31.43.jpeg`}
+                src={`${window.location.origin}/images/WhatsApp Image 2025-08-23 at 20.31.43.jpeg`}
                 alt="DN Kategaya Express Bus Interior"
                 style={{
                   width: '100%',
@@ -253,7 +253,7 @@ const Home = ({ setIsBookingDialogOpen }) => {
               boxShadow: '0 5px 15px rgba(0,0,0,0.1)'
             }}>
               <img
-                src={`${process.env.PUBLIC_URL}/images/WhatsApp Image 2025-08-23 at 20.29.24.jpeg`}
+                src={`${window.location.origin}/images/WhatsApp Image 2025-08-23 at 20.29.24.jpeg`}
                 alt="DN Kategaya Express Bus Service"
                 style={{
                   width: '100%',
