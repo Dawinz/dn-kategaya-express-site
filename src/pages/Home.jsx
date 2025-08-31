@@ -221,7 +221,7 @@ const Home = ({ setIsBookingDialogOpen }) => {
               boxShadow: '0 5px 15px rgba(0,0,0,0.1)'
             }}>
               <img
-                src="/images/WhatsApp Image 2025-08-23 at 20.33.00.jpeg"
+                src={`${process.env.PUBLIC_URL}/images/WhatsApp Image 2025-08-23 at 20.33.00.jpeg`}
                 alt="DN Kategaya Express Bus"
                 style={{
                   width: '100%',
@@ -237,7 +237,7 @@ const Home = ({ setIsBookingDialogOpen }) => {
               boxShadow: '0 5px 15px rgba(0,0,0,0.1)'
             }}>
               <img
-                src="/images/WhatsApp Image 2025-08-23 at 20.31.43.jpeg"
+                src={`${process.env.PUBLIC_URL}/images/WhatsApp Image 2025-08-23 at 20.31.43.jpeg`}
                 alt="DN Kategaya Express Bus Interior"
                 style={{
                   width: '100%',
@@ -253,7 +253,7 @@ const Home = ({ setIsBookingDialogOpen }) => {
               boxShadow: '0 5px 15px rgba(0,0,0,0.1)'
             }}>
               <img
-                src="/images/WhatsApp Image 2025-08-23 at 20.29.24.jpeg"
+                src={`${process.env.PUBLIC_URL}/images/WhatsApp Image 2025-08-23 at 20.29.24.jpeg`}
                 alt="DN Kategaya Express Bus Service"
                 style={{
                   width: '100%',
@@ -289,7 +289,7 @@ const Home = ({ setIsBookingDialogOpen }) => {
               fontSize: '1.1rem',
               color: '#666'
             }}>
-              Travel to major cities across Tanzania
+              Travel to major cities in the Lake Victoria region
             </p>
           </div>
 
@@ -299,14 +299,9 @@ const Home = ({ setIsBookingDialogOpen }) => {
             gap: '1.5rem'
           }}>
             {[
-              { from: "Dar es Salaam", to: "Arusha" },
-              { from: "Dar es Salaam", to: "Mwanza" },
-              { from: "Dar es Salaam", to: "Dodoma" },
-              { from: "Dar es Salaam", to: "Tanga" },
-              { from: "Dar es Salaam", to: "Morogoro" },
-              { from: "Dar es Salaam", to: "Iringa" },
-              { from: "Dar es Salaam", to: "Mbeya" },
-              { from: "Dar es Salaam", to: "Songea" }
+              { from: "Mwanza", to: "Bukoba" },
+              { from: "Mwanza", to: "Karagwe" },
+              { from: "Bukoba", to: "Karagwe" }
             ].map((route, index) => (
               <div key={index} style={{
                 background: 'white',
