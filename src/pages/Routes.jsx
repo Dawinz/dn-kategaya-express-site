@@ -3,60 +3,46 @@ import React from 'react';
 const Routes = () => {
   const routes = [
     {
-      from: 'Dar es Salaam',
-      to: 'Mwanza',
-      duration: '8-10 hours',
-      frequency: 'Daily',
-      price: 'From TZS 35,000'
-    },
-    {
       from: 'Mwanza',
-      to: 'Dar es Salaam',
-      duration: '8-10 hours',
-      frequency: 'Daily',
-      price: 'From TZS 35,000'
-    },
-    {
-      from: 'Dar es Salaam',
-      to: 'Arusha',
-      duration: '6-7 hours',
+      to: 'Bukoba',
+      duration: '3-4 hours',
       frequency: 'Daily',
       price: 'From TZS 25,000'
     },
     {
-      from: 'Arusha',
-      to: 'Dar es Salaam',
-      duration: '6-7 hours',
+      from: 'Bukoba',
+      to: 'Mwanza',
+      duration: '3-4 hours',
       frequency: 'Daily',
       price: 'From TZS 25,000'
     },
     {
       from: 'Mwanza',
-      to: 'Kahama',
+      to: 'Karagwe',
       duration: '2-3 hours',
-      frequency: 'Daily',
-      price: 'From TZS 15,000'
-    },
-    {
-      from: 'Kahama',
-      to: 'Mwanza',
-      duration: '2-3 hours',
-      frequency: 'Daily',
-      price: 'From TZS 15,000'
-    },
-    {
-      from: 'Mwanza',
-      to: 'Moshi',
-      duration: '4-5 hours',
       frequency: 'Daily',
       price: 'From TZS 20,000'
     },
     {
-      from: 'Moshi',
+      from: 'Karagwe',
       to: 'Mwanza',
-      duration: '4-5 hours',
+      duration: '2-3 hours',
       frequency: 'Daily',
       price: 'From TZS 20,000'
+    },
+    {
+      from: 'Bukoba',
+      to: 'Karagwe',
+      duration: '4-5 hours',
+      frequency: 'Daily',
+      price: 'From TZS 30,000'
+    },
+    {
+      from: 'Karagwe',
+      to: 'Bukoba',
+      duration: '4-5 hours',
+      frequency: 'Daily',
+      price: 'From TZS 30,000'
     }
   ];
 
@@ -85,7 +71,7 @@ const Routes = () => {
             fontSize: '1.2rem',
             opacity: 0.9
           }}>
-            Explore our network of routes across Tanzania
+            Explore our network of routes in the Lake Victoria region
           </p>
         </div>
       </div>

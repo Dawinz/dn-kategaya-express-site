@@ -4,7 +4,7 @@ A modern React-based bus booking website for DN Kategaya Express, providing prem
 
 ## 🚌 About
 
-DN Kategaya Express offers safe, comfortable, and reliable bus transportation services across Tanzania. This website allows customers to search for bus routes, book tickets, and manage their travel plans with an integrated SafariYetu booking system.
+DN Kategaya Express offers safe, comfortable, and reliable bus transportation services in the Lake Victoria region of Tanzania. This website allows customers to search for bus routes, book tickets, and manage their travel plans with an integrated SafariYetu booking system.
 
 ## ✨ Features
 
@@ -32,6 +32,7 @@ DN Kategaya Express offers safe, comfortable, and reliable bus transportation se
 - **Routing**: React Router DOM
 - **Icons**: Lucide React
 - **Build Tool**: Create React App
+- **Deployment**: Vercel (configured)
 
 ## 📁 Project Structure
 
@@ -88,6 +89,28 @@ src/
 npm run build
 ```
 
+## 🚀 Deployment
+
+### Vercel (Recommended)
+
+The project is configured for Vercel deployment with a `vercel.json` file:
+
+1. **Connect your GitHub repository** to Vercel
+2. **Framework preset**: Create React App (auto-detected)
+3. **Build command**: `npm run build`
+4. **Output directory**: `build`
+5. **Install command**: `npm install`
+
+The `vercel.json` file handles routing for the single-page application.
+
+### Other Platforms
+
+The project can also be deployed to:
+- Netlify
+- AWS Amplify
+- DigitalOcean App Platform
+- Self-hosted servers
+
 ## 📱 Pages
 
 ### Home (`/`)
@@ -96,7 +119,8 @@ npm run build
 - Features and gallery showcase
 
 ### Routes (`/routes`)
-- Available bus routes and destinations
+- Available bus routes in the Lake Victoria region
+- Routes: Mwanza ↔ Bukoba, Mwanza ↔ Karagwe, Bukoba ↔ Karagwe
 - Pricing and schedule information
 
 ### Gallery (`/gallery`)

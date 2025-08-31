@@ -153,13 +153,11 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
     }
   };
 
-  // Common Tanzania routes for DN Kategaya Express with codes
+  // Common routes for DN Kategaya Express
   const popularRoutes = [
     { name: 'MWANZA MWZ', value: 'Mwanza' },
-    { name: 'DAR ES SALAAM DAR', value: 'Dar es Salaam' },
-    { name: 'KAHAMA KAH', value: 'Kahama' },
-    { name: 'MOSHI MSH', value: 'Moshi' },
-    { name: 'ARUSHA ARS', value: 'Arusha' }
+    { name: 'BUKOBA BKB', value: 'Bukoba' },
+    { name: 'KARAGWE KRG', value: 'Karagwe' }
   ];
 
   // Remove unused variable
