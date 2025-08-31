@@ -25,18 +25,18 @@ export const getImagePathPublic = (imageName) => {
   return imagePath;
 };
 
-// Predefined image paths for common images
+// Predefined image paths for common images (using clean file names)
 export const IMAGES = {
   LOGO: 'logo.jpeg',
-  BUS_FLEET: 'WhatsApp Image 2025-08-23 at 20.27.10.jpeg',
-  BUS_EXTERIOR: 'WhatsApp Image 2025-08-23 at 20.27.29.jpeg',
-  BUS_SERVICE: 'WhatsApp Image 2025-08-23 at 20.27.43.jpeg',
-  BUS_INTERIOR: 'WhatsApp Image 2025-08-23 at 20.28.02.jpeg',
-  BUS_FEATURES: 'WhatsApp Image 2025-08-23 at 20.28.23.jpeg',
-  BUS_DESIGN: 'WhatsApp Image 2025-08-23 at 20.28.50.jpeg',
-  BUS_QUALITY: 'WhatsApp Image 2025-08-23 at 20.29.06.jpeg',
-  BUS_SAFETY: 'WhatsApp Image 2025-08-23 at 20.29.24.jpeg',
-  BUS_COMFORT: 'WhatsApp Image 2025-08-23 at 20.31.43.jpeg',
-  BUS_EXCELLENCE: 'WhatsApp Image 2025-08-23 at 20.33.00.jpeg',
-  BUS_FLEET_OVERVIEW: 'WhatsApp Image 2025-08-23 at 20.33.00 (1).jpeg'
+  BUS_FLEET_1: 'bus-fleet-1.jpeg',
+  BUS_FLEET_2: 'bus-fleet-2.jpeg',
+  BUS_FLEET_3: 'bus-fleet-3.jpeg',
+  BUS_FLEET_4: 'bus-fleet-4.jpeg',
+  BUS_FLEET_5: 'bus-fleet-5.jpeg',
+  BUS_FLEET_6: 'bus-fleet-6.jpeg',
+  BUS_FLEET_7: 'bus-fleet-7.jpeg',
+  BUS_FLEET_8: 'bus-fleet-8.jpeg',
+  BUS_FLEET_9: 'bus-fleet-9.jpeg',
+  BUS_FLEET_10: 'bus-fleet-10.jpeg',
+  BUS_FLEET_11: 'bus-fleet-11.jpeg'
 };
