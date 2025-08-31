@@ -1,21 +1,12 @@
 // Utility function to get the correct image path for both development and production
 export const getImagePath = (imageName) => {
-  // Check if we're in a browser environment
-  if (typeof window !== 'undefined') {
-    const origin = window.location.origin;
-    const imagePath = `${origin}/images/${imageName}`;
-    
-    // Debug logging
-    console.log('Image path resolved:', {
-      origin,
-      imageName,
-      fullPath: imagePath
-    });
-    
-    return imagePath;
-  }
-  
-  // Fallback for server-side rendering
+  // Simple approach: use relative paths that work in both environments
+  return `./images/${imageName}`;
+};
+
+// Alternative approach using absolute paths
+export const getImagePathAbsolute = (imageName) => {
+  // Use absolute paths from root
   return `/images/${imageName}`;
 };
 
