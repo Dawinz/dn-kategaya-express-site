@@ -5,62 +5,62 @@ const Gallery = () => {
 
   const galleryImages = [
     {
-      src: `${process.env.PUBLIC_URL}/images/logo.jpeg`,
+      src: '/images/logo.jpeg',
       alt: 'DN Kategaya Express Logo',
       title: 'Company Logo'
     },
     {
-      src: `${process.env.PUBLIC_URL}/images/WhatsApp Image 2025-08-23 at 20.27.10.jpeg`,
+      src: '/images/WhatsApp Image 2025-08-23 at 20.27.10.jpeg',
       alt: 'DN Kategaya Express Bus Fleet',
       title: 'Modern Bus Fleet'
     },
     {
-      src: `${process.env.PUBLIC_URL}/images/WhatsApp Image 2025-08-23 at 20.27.29.jpeg`,
+      src: '/images/WhatsApp Image 2025-08-23 at 20.27.29.jpeg',
       alt: 'DN Kategaya Express Bus Exterior',
       title: 'Premium Bus Exterior'
     },
     {
-      src: `${process.env.PUBLIC_URL}/images/WhatsApp Image 2025-08-23 at 20.27.43.jpeg`,
+      src: '/images/WhatsApp Image 2025-08-23 at 20.27.43.jpeg',
       alt: 'DN Kategaya Express Bus Service',
       title: 'Professional Service'
     },
     {
-      src: `${process.env.PUBLIC_URL}/images/WhatsApp Image 2025-08-23 at 20.28.02.jpeg`,
+      src: '/images/WhatsApp Image 2025-08-23 at 20.28.02.jpeg',
       alt: 'DN Kategaya Express Bus Interior',
       title: 'Comfortable Interior'
     },
     {
-      src: `${process.env.PUBLIC_URL}/images/WhatsApp Image 2025-08-23 at 20.28.23.jpeg`,
+      src: '/images/WhatsApp Image 2025-08-23 at 20.28.23.jpeg',
       alt: 'DN Kategaya Express Bus Features',
       title: 'Advanced Features'
     },
     {
-      src: `${process.env.PUBLIC_URL}/images/WhatsApp Image 2025-08-23 at 20.28.50.jpeg`,
+      src: '/images/WhatsApp Image 2025-08-23 at 20.28.50.jpeg',
       alt: 'DN Kategaya Express Bus Design',
       title: 'Elegant Design'
     },
     {
-      src: `${process.env.PUBLIC_URL}/images/WhatsApp Image 2025-08-23 at 20.29.06.jpeg`,
+      src: '/images/WhatsApp Image 2025-08-23 at 20.29.06.jpeg',
       alt: 'DN Kategaya Express Bus Quality',
       title: 'Premium Quality'
     },
     {
-      src: `${process.env.PUBLIC_URL}/images/WhatsApp Image 2025-08-23 at 20.29.24.jpeg`,
+      src: '/images/WhatsApp Image 2025-08-23 at 20.29.24.jpeg',
       alt: 'DN Kategaya Express Bus Safety',
       title: 'Safety Features'
     },
     {
-      src: `${process.env.PUBLIC_URL}/images/WhatsApp Image 2025-08-23 at 20.31.43.jpeg`,
+      src: '/images/WhatsApp Image 2025-08-23 at 20.31.43.jpeg',
       alt: 'DN Kategaya Express Bus Comfort',
       title: 'Passenger Comfort'
     },
     {
-      src: `${process.env.PUBLIC_URL}/images/WhatsApp Image 2025-08-23 at 20.33.00.jpeg`,
+      src: '/images/WhatsApp Image 2025-08-23 at 20.33.00.jpeg',
       alt: 'DN Kategaya Express Bus Excellence',
       title: 'Service Excellence'
     },
     {
-      src: `${process.env.PUBLIC_URL}/images/WhatsApp Image 2025-08-23 at 20.33.00 (1).jpeg`,
+      src: '/images/WhatsApp Image 2025-08-23 at 20.33.00 (1).jpeg',
       alt: 'DN Kategaya Express Bus Fleet Overview',
       title: 'Fleet Overview'
     }
