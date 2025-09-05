@@ -4,10 +4,10 @@ import { useLanguage } from '../context/LanguageContext';
 const Routes = () => {
   const { t } = useLanguage();
   const routes = [
-    { from: 'Karagwe', to: 'Mwanza', duration: '2-3 hours', frequency: t('daily'), price: 'From TZS 20,000' },
-    { from: 'Bukoba', to: 'Mwanza', duration: '3-4 hours', frequency: t('daily'), price: 'From TZS 25,000' },
-    { from: 'Mwanza', to: 'Karagwe', duration: '2-3 hours', frequency: t('daily'), price: 'From TZS 20,000' },
-    { from: 'Mwanza', to: 'Bukoba', duration: '3-4 hours', frequency: t('daily'), price: 'From TZS 25,000' }
+    { from: 'Karagwe', to: 'Mwanza', duration: '2-3 hours', frequency: t('daily') },
+    { from: 'Bukoba', to: 'Mwanza', duration: '3-4 hours', frequency: t('daily') },
+    { from: 'Mwanza', to: 'Karagwe', duration: '2-3 hours', frequency: t('daily') },
+    { from: 'Mwanza', to: 'Bukoba', duration: '3-4 hours', frequency: t('daily') }
   ];
 
   return (
@@ -144,24 +144,6 @@ const Routes = () => {
                     color: '#333'
                   }}>
                     {route.frequency}
-                  </p>
-                </div>
-
-                <div>
-                  <h4 style={{
-                    fontSize: '0.9rem',
-                    fontWeight: '600',
-                    color: '#666',
-                    marginBottom: '0.25rem'
-                  }}>
-                    {t('price')}
-                  </h4>
-                  <p style={{
-                    fontSize: '1rem',
-                    fontWeight: 'bold',
-                    color: '#E10600'
-                  }}>
-                    {route.price}
                   </p>
                 </div>
               </div>

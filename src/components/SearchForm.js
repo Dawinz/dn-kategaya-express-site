@@ -163,25 +163,27 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
     <div style={{ marginBottom: '2rem' }}>
       <div style={{
         background: 'linear-gradient(135deg, rgba(225,6,0,0.95), rgba(255,215,0,0.95), rgba(0,87,255,0.95))',
-        padding: '2rem',
-        borderRadius: '16px',
-        boxShadow: '0 12px 30px rgba(0,0,0,0.2)'
+        padding: '1.5rem',
+        borderRadius: '12px',
+        boxShadow: '0 8px 20px rgba(0,0,0,0.15)',
+        maxWidth: '800px',
+        margin: '0 auto'
       }}>
       <form onSubmit={handleSubmit} style={{ marginBottom: '0' }}>
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-          gap: '1rem',
-          marginBottom: '1.5rem'
+          gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
+          gap: '0.75rem',
+          marginBottom: '1rem'
         }}>
           {/* From */}
           <div>
             <label style={{
               display: 'block',
               fontWeight: 600,
-              marginBottom: '0.5rem',
+              marginBottom: '0.4rem',
               color: 'white',
-              fontSize: '0.9rem'
+              fontSize: '0.85rem'
             }}>
               {t('from')}
             </label>
@@ -191,13 +193,13 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
               onChange={handleInputChange}
               style={{
                 width: '100%',
-                padding: '0.75rem',
+                padding: '0.6rem',
                 border: '2px solid transparent',
-                borderRadius: '10px',
-                fontSize: '1rem',
+                borderRadius: '8px',
+                fontSize: '0.9rem',
                 transition: 'box-shadow 0.3s, transform 0.2s',
                 background: 'linear-gradient(white, white) padding-box, linear-gradient(135deg, #FFD700, #E10600) border-box',
-                boxShadow: '0 6px 18px rgba(0,0,0,0.08)'
+                boxShadow: '0 4px 12px rgba(0,0,0,0.06)'
               }}
             >
               <option value="">{t('selectDeparture')}</option>
@@ -212,9 +214,9 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
             <label style={{
               display: 'block',
               fontWeight: 600,
-              marginBottom: '0.5rem',
+              marginBottom: '0.4rem',
               color: 'white',
-              fontSize: '0.9rem'
+              fontSize: '0.85rem'
             }}>
               {t('to')}
             </label>
@@ -245,9 +247,9 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
             <label style={{
               display: 'block',
               fontWeight: 600,
-              marginBottom: '0.5rem',
+              marginBottom: '0.4rem',
               color: 'white',
-              fontSize: '0.9rem'
+              fontSize: '0.85rem'
             }}>
               {t('date')}
             </label>
@@ -275,9 +277,9 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
             <label style={{
               display: 'block',
               fontWeight: 600,
-              marginBottom: '0.5rem',
+              marginBottom: '0.4rem',
               color: 'white',
-              fontSize: '0.9rem'
+              fontSize: '0.85rem'
             }}>
               {t('passengers')}
             </label>
@@ -328,19 +330,19 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
               background: isLoading ? '#ccc' : 'linear-gradient(135deg, #FFD700, #E10600, #0057FF)',
               color: 'white',
               border: 'none',
-              padding: '1rem 2.25rem',
+              padding: '0.8rem 1.8rem',
               borderRadius: '999px',
-              fontSize: '1.1rem',
+              fontSize: '1rem',
               fontWeight: 700,
               cursor: isLoading ? 'not-allowed' : 'pointer',
               transition: 'transform 0.2s, box-shadow 0.3s',
-              boxShadow: isLoading ? 'none' : '0 10px 24px rgba(0,0,0,0.18)',
+              boxShadow: isLoading ? 'none' : '0 8px 18px rgba(0,0,0,0.15)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              gap: '0.5rem',
+              gap: '0.4rem',
               margin: '0 auto',
-              minWidth: '200px'
+              minWidth: '180px'
             }}
           >
             {isLoading ? (
@@ -367,22 +369,22 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
         {/* Quick Tips */}
         <div style={{
           textAlign: 'center',
-          fontSize: '0.9rem',
+          fontSize: '0.8rem',
           color: 'white',
-          marginTop: '1rem'
+          marginTop: '0.8rem'
         }}>
           <p>{t('tip')}</p>
         </div>
 
         {/* Popular Routes Quick Links */}
         <div style={{
-          marginTop: '1rem',
+          marginTop: '0.8rem',
           textAlign: 'center'
         }}>
           <p style={{
-            fontSize: '0.9rem',
+            fontSize: '0.8rem',
             color: '#666',
-            marginBottom: '0.5rem'
+            marginBottom: '0.4rem'
           }}>
             {t('popularRoutesLabel')}
           </p>
@@ -411,12 +413,12 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
                 }}
                 disabled={isLoading}
                 style={{
-                  fontSize: '0.8rem',
+                  fontSize: '0.75rem',
                   background: '#f8f9fa',
                   border: '1px solid #e1e5e9',
                   color: '#333',
-                  padding: '0.5rem 1rem',
-                  borderRadius: '20px',
+                  padding: '0.4rem 0.8rem',
+                  borderRadius: '16px',
                   cursor: 'pointer',
                   transition: 'all 0.3s'
                 }}
