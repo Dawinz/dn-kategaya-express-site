@@ -28,11 +28,13 @@ const Hero = ({ setIsBookingDialogOpen }) => {
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
+      backgroundAttachment: 'fixed',
       color: 'white',
       padding: '4rem 0',
       textAlign: 'center',
       position: 'relative',
-      overflow: 'hidden'
+      overflow: 'hidden',
+      minHeight: '100vh'
     }}>
       <div style={{
         position: 'relative',
