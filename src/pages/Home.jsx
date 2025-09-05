@@ -2,10 +2,12 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 import Hero from '../components/Hero';
 import SearchForm from '../components/SearchForm';
+import { useLanguage } from '../context/LanguageContext';
 
 const Home = ({ setIsBookingDialogOpen }) => {
   const location = useLocation();
   const prefillData = location.state?.prefillForm;
+  const { t } = useLanguage();
   
   return (
     <div>
@@ -35,7 +37,7 @@ const Home = ({ setIsBookingDialogOpen }) => {
               marginBottom: '2rem',
               color: '#333'
             }}>
-              Find Your Perfect Journey
+              {t('findPerfectJourney')}
             </h2>
             <SearchForm setIsBookingDialogOpen={setIsBookingDialogOpen} prefillData={prefillData} />
           </div>
@@ -59,13 +61,13 @@ const Home = ({ setIsBookingDialogOpen }) => {
               marginBottom: '1rem',
               color: '#333'
             }}>
-              Why Choose DN Kategaya Express
+              {t('whyChooseUs')}
             </h2>
             <p style={{
               fontSize: '1.1rem',
               color: '#666'
             }}>
-              Experience the difference with our premium bus services
+              {t('experienceDifference')}
             </p>
           </div>
           
@@ -102,10 +104,10 @@ const Home = ({ setIsBookingDialogOpen }) => {
                 marginBottom: '1rem',
                 color: '#333'
               }}>
-                Premium Comfort
+                {t('premiumComfort')}
               </h3>
               <p style={{ color: '#666', lineHeight: 1.6 }}>
-                Luxury seats, air conditioning, and spacious interiors for your comfort
+                {t('premiumComfortDesc')}
               </p>
             </div>
             
@@ -137,10 +139,10 @@ const Home = ({ setIsBookingDialogOpen }) => {
                 marginBottom: '1rem',
                 color: '#333'
               }}>
-                On-Time Departure
+                {t('onTimeDeparture')}
               </h3>
               <p style={{ color: '#666', lineHeight: 1.6 }}>
-                Reliable schedules and punctual service you can depend on
+                {t('onTimeDepartureDesc')}
               </p>
             </div>
             
@@ -172,10 +174,10 @@ const Home = ({ setIsBookingDialogOpen }) => {
                 marginBottom: '1rem',
                 color: '#333'
               }}>
-                Safe Travel
+                {t('safeTravel')}
               </h3>
               <p style={{ color: '#666', lineHeight: 1.6 }}>
-                Professional drivers and well-maintained vehicles for your safety
+                {t('safeTravelDesc')}
               </p>
             </div>
           </div>
@@ -199,13 +201,13 @@ const Home = ({ setIsBookingDialogOpen }) => {
               marginBottom: '1rem',
               color: '#333'
             }}>
-              Our Modern Fleet
+              {t('ourModernFleet')}
             </h2>
             <p style={{
               fontSize: '1.1rem',
               color: '#666'
             }}>
-              Travel in comfort with our well-maintained buses
+              {t('travelInComfort')}
             </p>
           </div>
 
@@ -283,13 +285,13 @@ const Home = ({ setIsBookingDialogOpen }) => {
               marginBottom: '1rem',
               color: '#333'
             }}>
-              Popular Routes
+              {t('popularRoutes')}
             </h2>
             <p style={{
               fontSize: '1.1rem',
               color: '#666'
             }}>
-              Travel to major cities in the Lake Victoria region
+              {t('travelToMajorCities')}
             </p>
           </div>
 
@@ -299,9 +301,10 @@ const Home = ({ setIsBookingDialogOpen }) => {
             gap: '1.5rem'
           }}>
             {[
-              { from: "Mwanza", to: "Bukoba" },
+              { from: "Karagwe", to: "Mwanza" },
+              { from: "Bukoba", to: "Mwanza" },
               { from: "Mwanza", to: "Karagwe" },
-              { from: "Bukoba", to: "Karagwe" }
+              { from: "Mwanza", to: "Bukoba" }
             ].map((route, index) => (
               <div key={index} style={{
                 background: 'white',
@@ -364,13 +367,13 @@ const Home = ({ setIsBookingDialogOpen }) => {
               marginBottom: '1rem',
               color: '#333'
             }}>
-              What Our Customers Say
+              {t('whatCustomersSay')}
             </h2>
             <p style={{
               fontSize: '1.1rem',
               color: '#666'
             }}>
-              Join thousands of satisfied travelers
+              {t('joinSatisfiedTravelers')}
             </p>
           </div>
 
@@ -406,7 +409,7 @@ const Home = ({ setIsBookingDialogOpen }) => {
                 lineHeight: 1.6,
                 fontSize: '1rem'
               }}>
-                "Excellent service! The buses are clean, comfortable, and always on time. Highly recommend!"
+                "{t('excellentService')}"
               </p>
               <div style={{
                 fontWeight: '600',
@@ -444,7 +447,7 @@ const Home = ({ setIsBookingDialogOpen }) => {
                 lineHeight: 1.6,
                 fontSize: '1rem'
               }}>
-                "Safe and reliable transportation. The drivers are professional and the journey was smooth."
+                "{t('safeReliable')}"
               </p>
               <div style={{
                 fontWeight: '600',
@@ -482,7 +485,7 @@ const Home = ({ setIsBookingDialogOpen }) => {
                 lineHeight: 1.6,
                 fontSize: '1rem'
               }}>
-                "Best bus service in Tanzania! Affordable prices and great customer service."
+                "{t('bestBusService')}"
               </p>
               <div style={{
                 fontWeight: '600',

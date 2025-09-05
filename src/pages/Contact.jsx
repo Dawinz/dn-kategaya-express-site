@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { useLanguage } from '../context/LanguageContext';
 
 const Contact = () => {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -42,13 +44,13 @@ const Contact = () => {
             fontWeight: 'bold',
             marginBottom: '1rem'
           }}>
-            Contact Us
+            {t('contactUs')}
           </h1>
           <p style={{
             fontSize: '1.2rem',
             opacity: 0.9
           }}>
-            Get in touch with us for any questions or inquiries
+            {t('getInTouchQuestions')}
           </p>
         </div>
       </div>
@@ -67,10 +69,11 @@ const Contact = () => {
           
           {/* Contact Form */}
           <div style={{
-            background: 'white',
+            background: 'linear-gradient(135deg, rgba(225,6,0,0.95), rgba(255,215,0,0.95), rgba(0,87,255,0.95))',
+            color: 'white',
             padding: '2rem',
-            borderRadius: '12px',
-            boxShadow: '0 5px 15px rgba(0,0,0,0.1)'
+            borderRadius: '16px',
+            boxShadow: '0 12px 30px rgba(0,0,0,0.2)'
           }}>
             <h2 style={{
               fontSize: '1.8rem',
@@ -78,7 +81,7 @@ const Contact = () => {
               marginBottom: '1.5rem',
               color: '#333'
             }}>
-              Send Message
+              {t('sendMessage')}
             </h2>
             
             <form onSubmit={handleSubmit} style={{ display: 'grid', gap: '1.5rem' }}>
@@ -87,10 +90,10 @@ const Contact = () => {
                   display: 'block',
                   fontWeight: 600,
                   marginBottom: '0.5rem',
-                  color: '#333',
+                  color: 'white',
                   fontSize: '0.9rem'
                 }}>
-                  Full Name *
+                  {t('fullName')} *
                 </label>
                 <input
                   type="text"
@@ -101,12 +104,14 @@ const Contact = () => {
                   style={{
                     width: '100%',
                     padding: '0.75rem',
-                    border: '2px solid #e1e5e9',
-                    borderRadius: '8px',
+                    border: '2px solid transparent',
+                    borderRadius: '10px',
                     fontSize: '1rem',
-                    transition: 'border-color 0.3s'
+                    transition: 'box-shadow 0.3s, transform 0.2s',
+                    background: 'linear-gradient(white, white) padding-box, linear-gradient(135deg, #FFD700, #E10600) border-box',
+                    boxShadow: '0 6px 18px rgba(0,0,0,0.08)'
                   }}
-                  placeholder="Enter your full name"
+                  placeholder={t('enterFullName')}
                 />
               </div>
 
@@ -115,10 +120,10 @@ const Contact = () => {
                   display: 'block',
                   fontWeight: 600,
                   marginBottom: '0.5rem',
-                  color: '#333',
+                  color: 'white',
                   fontSize: '0.9rem'
                 }}>
-                  Email Address *
+                  {t('emailAddress')} *
                 </label>
                 <input
                   type="email"
@@ -129,12 +134,14 @@ const Contact = () => {
                   style={{
                     width: '100%',
                     padding: '0.75rem',
-                    border: '2px solid #e1e5e9',
-                    borderRadius: '8px',
+                    border: '2px solid transparent',
+                    borderRadius: '10px',
                     fontSize: '1rem',
-                    transition: 'border-color 0.3s'
+                    transition: 'box-shadow 0.3s, transform 0.2s',
+                    background: 'linear-gradient(white, white) padding-box, linear-gradient(135deg, #FFD700, #0057FF) border-box',
+                    boxShadow: '0 6px 18px rgba(0,0,0,0.08)'
                   }}
-                  placeholder="Enter your email address"
+                  placeholder={t('enterEmail')}
                 />
               </div>
 
@@ -143,10 +150,10 @@ const Contact = () => {
                   display: 'block',
                   fontWeight: 600,
                   marginBottom: '0.5rem',
-                  color: '#333',
+                  color: 'white',
                   fontSize: '0.9rem'
                 }}>
-                  Phone Number
+                  {t('phoneNumber')}
                 </label>
                 <input
                   type="tel"
@@ -156,12 +163,14 @@ const Contact = () => {
                   style={{
                     width: '100%',
                     padding: '0.75rem',
-                    border: '2px solid #e1e5e9',
-                    borderRadius: '8px',
+                    border: '2px solid transparent',
+                    borderRadius: '10px',
                     fontSize: '1rem',
-                    transition: 'border-color 0.3s'
+                    transition: 'box-shadow 0.3s, transform 0.2s',
+                    background: 'linear-gradient(white, white) padding-box, linear-gradient(135deg, #E10600, #FFD700) border-box',
+                    boxShadow: '0 6px 18px rgba(0,0,0,0.08)'
                   }}
-                  placeholder="Enter your phone number"
+                  placeholder={t('enterPhone')}
                 />
               </div>
 
@@ -170,10 +179,10 @@ const Contact = () => {
                   display: 'block',
                   fontWeight: 600,
                   marginBottom: '0.5rem',
-                  color: '#333',
+                  color: 'white',
                   fontSize: '0.9rem'
                 }}>
-                  Message *
+                  {t('message')} *
                 </label>
                 <textarea
                   name="message"
@@ -184,31 +193,34 @@ const Contact = () => {
                   style={{
                     width: '100%',
                     padding: '0.75rem',
-                    border: '2px solid #e1e5e9',
-                    borderRadius: '8px',
+                    border: '2px solid transparent',
+                    borderRadius: '12px',
                     fontSize: '1rem',
-                    transition: 'border-color 0.3s',
-                    resize: 'vertical'
+                    transition: 'box-shadow 0.3s, transform 0.2s',
+                    resize: 'vertical',
+                    background: 'linear-gradient(white, white) padding-box, linear-gradient(135deg, #0057FF, #FFD700) border-box',
+                    boxShadow: '0 8px 22px rgba(0,0,0,0.12)'
                   }}
-                  placeholder="Enter your message"
+                  placeholder={t('enterMessage')}
                 />
               </div>
 
               <button
                 type="submit"
                 style={{
-                  background: '#E10600',
+                  background: 'linear-gradient(135deg, #FFD700, #E10600, #0057FF)',
                   color: 'white',
                   border: 'none',
-                  padding: '1rem 2rem',
-                  borderRadius: '8px',
+                  padding: '1rem 2.25rem',
+                  borderRadius: '999px',
                   fontSize: '1.1rem',
-                  fontWeight: 600,
+                  fontWeight: 700,
                   cursor: 'pointer',
-                  transition: 'background-color 0.3s'
+                  transition: 'transform 0.2s, box-shadow 0.3s',
+                  boxShadow: '0 10px 24px rgba(0,0,0,0.18)'
                 }}
               >
-                Send Message
+                {t('sendMessageBtn')}
               </button>
             </form>
           </div>
@@ -226,7 +238,7 @@ const Contact = () => {
               marginBottom: '1.5rem',
               color: '#333'
             }}>
-              Contact Information
+              {t('contactInformation')}
             </h2>
             
             <div style={{ display: 'grid', gap: '1.5rem' }}>
@@ -237,19 +249,15 @@ const Contact = () => {
                   marginBottom: '0.5rem',
                   color: '#E10600'
                 }}>
-                  Phone Support
+                  {t('phoneSupport')}
                 </h3>
                 <p style={{ color: '#666', marginBottom: '0.5rem' }}>
-                  Call us directly for immediate assistance:
+                  {t('callDirectly')}
                 </p>
-                <a href="tel:+255755478744" style={{
-                  color: '#E10600',
-                  textDecoration: 'none',
-                  fontSize: '1.1rem',
-                  fontWeight: '600'
-                }}>
-                  +255 755 478 744
-                </a>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
+                  <a href="tel:+255743655381" style={{ color: '#E10600', textDecoration: 'none', fontSize: '1.1rem', fontWeight: '600' }}>+255 743 655 381</a>
+                  <a href="tel:+255767894284" style={{ color: '#E10600', textDecoration: 'none', fontSize: '1.1rem', fontWeight: '600' }}>+255 767 894 284</a>
+                </div>
               </div>
 
               <div>
@@ -259,10 +267,10 @@ const Contact = () => {
                   marginBottom: '0.5rem',
                   color: '#E10600'
                 }}>
-                  Email Support
+                  {t('emailSupport')}
                 </h3>
                 <p style={{ color: '#666', marginBottom: '0.5rem' }}>
-                  Send us an email for detailed inquiries:
+                  {t('sendEmail')}
                 </p>
                 <a href="mailto:info@dnkategayaexpress.com" style={{
                   color: '#E10600',
@@ -281,13 +289,13 @@ const Contact = () => {
                   marginBottom: '0.5rem',
                   color: '#E10600'
                 }}>
-                  Office Location
+                  {t('officeLocation')}
                 </h3>
                 <p style={{ color: '#666', marginBottom: '0.5rem' }}>
-                  Visit our office in Dar es Salaam:
+                  {t('visitOffice')}
                 </p>
                 <p style={{ color: '#333', fontWeight: '500' }}>
-                  Dar es Salaam, Tanzania
+                  P.O.Box 210, Karagwe
                 </p>
               </div>
 
@@ -298,12 +306,12 @@ const Contact = () => {
                   marginBottom: '0.5rem',
                   color: '#E10600'
                 }}>
-                  Business Hours
+                  {t('businessHours')}
                 </h3>
                 <div style={{ color: '#666' }}>
-                  <p style={{ marginBottom: '0.25rem' }}><strong>Monday - Friday:</strong> 7:00 AM - 8:00 PM</p>
-                  <p style={{ marginBottom: '0.25rem' }}><strong>Saturday:</strong> 7:00 AM - 6:00 PM</p>
-                  <p style={{ marginBottom: '0.25rem' }}><strong>Sunday:</strong> 8:00 AM - 5:00 PM</p>
+                  <p style={{ marginBottom: '0.25rem' }}><strong>{t('mondayFriday')}</strong></p>
+                  <p style={{ marginBottom: '0.25rem' }}><strong>{t('saturday')}</strong></p>
+                  <p style={{ marginBottom: '0.25rem' }}><strong>{t('sunday')}</strong></p>
                 </div>
               </div>
             </div>
@@ -316,10 +324,10 @@ const Contact = () => {
                 marginBottom: '1rem',
                 color: '#E10600'
               }}>
-                Follow Us
+                {t('followUs')}
               </h3>
               <div style={{ display: 'flex', gap: '1rem' }}>
-                <a href="https://wa.me/255755478744" target="_blank" rel="noopener noreferrer" style={{
+                <a href="https://wa.me/255743655381" target="_blank" rel="noopener noreferrer" style={{
                   display: 'flex',
                   alignItems: 'center',
                   gap: '0.5rem',
@@ -331,7 +339,7 @@ const Contact = () => {
                   fontWeight: '600',
                   transition: 'transform 0.3s'
                 }}>
-                  📱 WhatsApp
+                  {t('whatsapp')}
                 </a>
                 
                 <a href="https://facebook.com/dnkategayaexpress" target="_blank" rel="noopener noreferrer" style={{
@@ -346,7 +354,7 @@ const Contact = () => {
                   fontWeight: '600',
                   transition: 'transform 0.3s'
                 }}>
-                  📘 Facebook
+                  {t('facebook')}
                 </a>
               </div>
             </div>

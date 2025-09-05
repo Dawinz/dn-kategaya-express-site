@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import SafariYetuScrollManager from '../utils/safariYetuScrollManager';
+import { useLanguage } from '../context/LanguageContext';
 
 const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     from: prefillData?.from || '',
     to: prefillData?.to || '',
@@ -10,7 +12,6 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
   });
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
-  const [currentBookingData, setCurrentBookingData] = useState({});
   const scrollManagerRef = useRef(null);
 
   // Cleanup scroll manager on component unmount
@@ -46,23 +47,23 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
 
   const validateForm = () => {
     if (!formData.from) {
-      setError('Please select departure city');
+      setError(t('pleaseSelectDeparture'));
       return false;
     }
     if (!formData.to) {
-      setError('Please select destination city');
+      setError(t('pleaseSelectDestination'));
       return false;
     }
     if (formData.from === formData.to) {
-      setError('Departure and destination cities must be different');
+      setError(t('citiesMustBeDifferent'));
       return false;
     }
     if (!formData.date) {
-      setError('Please select travel date');
+      setError(t('pleaseSelectDate'));
       return false;
     }
     if (!formData.passengers) {
-      setError('Please select number of passengers');
+      setError(t('pleaseSelectPassengers'));
       return false;
     }
     return true;
@@ -95,7 +96,6 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
           console.log('SafariYetu dialog closed via callback');
           setIsBookingDialogOpen(false);
           setIsLoading(false);
-          setCurrentBookingData({});
           setError(''); // Suppress any error when closing the panel
         }
       };
@@ -104,7 +104,6 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
       scrollManagerRef.current = SafariYetuScrollManager.createInstance();
       setIsLoading(true);
       setIsBookingDialogOpen(true); // <-- show blur on app
-      setCurrentBookingData(bookingData);
 
       // Check if SafariPlus is loaded, handle development vs production
       if (typeof window.safariplus === 'undefined') {
@@ -122,7 +121,6 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
             }
             setIsLoading(false);
             setIsBookingDialogOpen(false); // <-- remove blur on app
-            setCurrentBookingData({});
           }, 1500);
           return;
         } else {
@@ -149,7 +147,6 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
       }
       setIsLoading(false);
       setIsBookingDialogOpen(false); // <-- remove blur on app
-      setCurrentBookingData({});
     }
   };
 
@@ -164,7 +161,13 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
 
   return (
     <div style={{ marginBottom: '2rem' }}>
-      <form onSubmit={handleSubmit} style={{ marginBottom: '2rem' }}>
+      <div style={{
+        background: 'linear-gradient(135deg, rgba(225,6,0,0.95), rgba(255,215,0,0.95), rgba(0,87,255,0.95))',
+        padding: '2rem',
+        borderRadius: '16px',
+        boxShadow: '0 12px 30px rgba(0,0,0,0.2)'
+      }}>
+      <form onSubmit={handleSubmit} style={{ marginBottom: '0' }}>
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
@@ -177,10 +180,10 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
               display: 'block',
               fontWeight: 600,
               marginBottom: '0.5rem',
-              color: '#333',
+              color: 'white',
               fontSize: '0.9rem'
             }}>
-              FROM
+              {t('from')}
             </label>
             <select
               name="from"
@@ -189,13 +192,15 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
               style={{
                 width: '100%',
                 padding: '0.75rem',
-                border: '2px solid #e1e5e9',
-                borderRadius: '8px',
+                border: '2px solid transparent',
+                borderRadius: '10px',
                 fontSize: '1rem',
-                transition: 'border-color 0.3s'
+                transition: 'box-shadow 0.3s, transform 0.2s',
+                background: 'linear-gradient(white, white) padding-box, linear-gradient(135deg, #FFD700, #E10600) border-box',
+                boxShadow: '0 6px 18px rgba(0,0,0,0.08)'
               }}
             >
-              <option value="">Select departure...</option>
+              <option value="">{t('selectDeparture')}</option>
               {popularRoutes.map(route => (
                 <option key={route.value} value={route.value}>{route.name}</option>
               ))}
@@ -208,10 +213,10 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
               display: 'block',
               fontWeight: 600,
               marginBottom: '0.5rem',
-              color: '#333',
+              color: 'white',
               fontSize: '0.9rem'
             }}>
-              TO
+              {t('to')}
             </label>
             <select
               name="to"
@@ -220,13 +225,15 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
               style={{
                 width: '100%',
                 padding: '0.75rem',
-                border: '2px solid #e1e5e9',
-                borderRadius: '8px',
+                border: '2px solid transparent',
+                borderRadius: '10px',
                 fontSize: '1rem',
-                transition: 'border-color 0.3s'
+                transition: 'box-shadow 0.3s, transform 0.2s',
+                background: 'linear-gradient(white, white) padding-box, linear-gradient(135deg, #0057FF, #FFD700) border-box',
+                boxShadow: '0 6px 18px rgba(0,0,0,0.08)'
               }}
             >
-              <option value="">Select destination...</option>
+              <option value="">{t('selectDestination')}</option>
               {popularRoutes.map(route => (
                 <option key={route.value} value={route.value}>{route.name}</option>
               ))}
@@ -239,10 +246,10 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
               display: 'block',
               fontWeight: 600,
               marginBottom: '0.5rem',
-              color: '#333',
+              color: 'white',
               fontSize: '0.9rem'
             }}>
-              TRAVEL DATE
+              {t('date')}
             </label>
             <input
               type="date"
@@ -253,10 +260,12 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
               style={{
                 width: '100%',
                 padding: '0.75rem',
-                border: '2px solid #e1e5e9',
-                borderRadius: '8px',
+                border: '2px solid transparent',
+                borderRadius: '10px',
                 fontSize: '1rem',
-                transition: 'border-color 0.3s'
+                transition: 'box-shadow 0.3s, transform 0.2s',
+                background: 'linear-gradient(white, white) padding-box, linear-gradient(135deg, #E10600, #FFD700) border-box',
+                boxShadow: '0 6px 18px rgba(0,0,0,0.08)'
               }}
             />
           </div>
@@ -267,10 +276,10 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
               display: 'block',
               fontWeight: 600,
               marginBottom: '0.5rem',
-              color: '#333',
+              color: 'white',
               fontSize: '0.9rem'
             }}>
-              PASSENGERS
+              {t('passengers')}
             </label>
             <select
               name="passengers"
@@ -279,14 +288,16 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
               style={{
                 width: '100%',
                 padding: '0.75rem',
-                border: '2px solid #e1e5e9',
-                borderRadius: '8px',
+                border: '2px solid transparent',
+                borderRadius: '10px',
                 fontSize: '1rem',
-                transition: 'border-color 0.3s'
+                transition: 'box-shadow 0.3s, transform 0.2s',
+                background: 'linear-gradient(white, white) padding-box, linear-gradient(135deg, #FFD700, #0057FF) border-box',
+                boxShadow: '0 6px 18px rgba(0,0,0,0.08)'
               }}
             >
               {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(num => (
-                <option key={num} value={num}>{num} {num === 1 ? 'Passenger' : 'Passengers'}</option>
+                <option key={num} value={num}>{num} {num === 1 ? t('passenger') : t('passengers')}</option>
               ))}
             </select>
           </div>
@@ -314,15 +325,16 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
             type="submit"
             disabled={isLoading}
             style={{
-              background: isLoading ? '#ccc' : '#E10600',
+              background: isLoading ? '#ccc' : 'linear-gradient(135deg, #FFD700, #E10600, #0057FF)',
               color: 'white',
               border: 'none',
-              padding: '1rem 2rem',
-              borderRadius: '8px',
+              padding: '1rem 2.25rem',
+              borderRadius: '999px',
               fontSize: '1.1rem',
-              fontWeight: 600,
+              fontWeight: 700,
               cursor: isLoading ? 'not-allowed' : 'pointer',
-              transition: 'background-color 0.3s',
+              transition: 'transform 0.2s, box-shadow 0.3s',
+              boxShadow: isLoading ? 'none' : '0 10px 24px rgba(0,0,0,0.18)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -342,11 +354,11 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
                   animation: 'spin 1s linear infinite',
                   marginRight: '0.5rem'
                 }}></div>
-                Searching...
+                {t('searching')}
               </span>
             ) : (
               <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                🔍 Search & Book Now
+                {t('searchBookNow')}
               </span>
             )}
           </button>
@@ -356,10 +368,10 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
         <div style={{
           textAlign: 'center',
           fontSize: '0.9rem',
-          color: '#666',
+          color: 'white',
           marginTop: '1rem'
         }}>
-          <p>💡 <strong>Tip:</strong> Book early for the best prices and seat selection</p>
+          <p>{t('tip')}</p>
         </div>
 
         {/* Popular Routes Quick Links */}
@@ -372,7 +384,7 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
             color: '#666',
             marginBottom: '0.5rem'
           }}>
-            Popular Routes:
+            {t('popularRoutesLabel')}
           </p>
           <div style={{
             display: 'flex',
@@ -381,9 +393,10 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
             gap: '0.5rem'
           }}>
             {[
-              { route: 'Dar es Salaam - Mwanza', from: 'Dar es Salaam', to: 'Mwanza' },
-              { route: 'Mwanza - Kahama', from: 'Mwanza', to: 'Kahama' },
-              { route: 'Mwanza - Moshi', from: 'Mwanza', to: 'Moshi' }
+              { route: 'Karagwe - Mwanza', from: 'Karagwe', to: 'Mwanza' },
+              { route: 'Bukoba - Mwanza', from: 'Bukoba', to: 'Mwanza' },
+              { route: 'Mwanza - Karagwe', from: 'Mwanza', to: 'Karagwe' },
+              { route: 'Mwanza - Bukoba', from: 'Mwanza', to: 'Bukoba' }
             ].map(({ route, from, to }) => (
               <button
                 key={route}
@@ -414,7 +427,7 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
           </div>
         </div>
             </form>
-
+      </div>
       {/* SafariPlus Modal Container */}
       <div id="safariplus-modal"></div>
 

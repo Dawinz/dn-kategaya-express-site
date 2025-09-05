@@ -1,49 +1,13 @@
 import React from 'react';
+import { useLanguage } from '../context/LanguageContext';
 
 const Routes = () => {
+  const { t } = useLanguage();
   const routes = [
-    {
-      from: 'Mwanza',
-      to: 'Bukoba',
-      duration: '3-4 hours',
-      frequency: 'Daily',
-      price: 'From TZS 25,000'
-    },
-    {
-      from: 'Bukoba',
-      to: 'Mwanza',
-      duration: '3-4 hours',
-      frequency: 'Daily',
-      price: 'From TZS 25,000'
-    },
-    {
-      from: 'Mwanza',
-      to: 'Karagwe',
-      duration: '2-3 hours',
-      frequency: 'Daily',
-      price: 'From TZS 20,000'
-    },
-    {
-      from: 'Karagwe',
-      to: 'Mwanza',
-      duration: '2-3 hours',
-      frequency: 'Daily',
-      price: 'From TZS 20,000'
-    },
-    {
-      from: 'Bukoba',
-      to: 'Karagwe',
-      duration: '4-5 hours',
-      frequency: 'Daily',
-      price: 'From TZS 30,000'
-    },
-    {
-      from: 'Karagwe',
-      to: 'Bukoba',
-      duration: '4-5 hours',
-      frequency: 'Daily',
-      price: 'From TZS 30,000'
-    }
+    { from: 'Karagwe', to: 'Mwanza', duration: '2-3 hours', frequency: t('daily'), price: 'From TZS 20,000' },
+    { from: 'Bukoba', to: 'Mwanza', duration: '3-4 hours', frequency: t('daily'), price: 'From TZS 25,000' },
+    { from: 'Mwanza', to: 'Karagwe', duration: '2-3 hours', frequency: t('daily'), price: 'From TZS 20,000' },
+    { from: 'Mwanza', to: 'Bukoba', duration: '3-4 hours', frequency: t('daily'), price: 'From TZS 25,000' }
   ];
 
   return (
@@ -65,13 +29,13 @@ const Routes = () => {
             fontWeight: 'bold',
             marginBottom: '1rem'
           }}>
-            Our Routes
+            {t('ourRoutes')}
           </h1>
           <p style={{
             fontSize: '1.2rem',
             opacity: 0.9
           }}>
-            Explore our network of routes in the Lake Victoria region
+            {t('exploreNetwork')}
           </p>
         </div>
       </div>
@@ -154,7 +118,7 @@ const Routes = () => {
                     color: '#666',
                     marginBottom: '0.25rem'
                   }}>
-                    Duration
+                    {t('duration')}
                   </h4>
                   <p style={{
                     fontSize: '1rem',
@@ -172,7 +136,7 @@ const Routes = () => {
                     color: '#666',
                     marginBottom: '0.25rem'
                   }}>
-                    Frequency
+                    {t('frequency')}
                   </h4>
                   <p style={{
                     fontSize: '1rem',
@@ -190,7 +154,7 @@ const Routes = () => {
                     color: '#666',
                     marginBottom: '0.25rem'
                   }}>
-                    Price
+                    {t('price')}
                   </h4>
                   <p style={{
                     fontSize: '1rem',
@@ -215,7 +179,7 @@ const Routes = () => {
                 marginTop: '1rem',
                 transition: 'background-color 0.3s'
               }}>
-                Book This Route
+                {t('bookThisRoute')}
               </button>
             </div>
           ))}
@@ -236,7 +200,7 @@ const Routes = () => {
             textAlign: 'center',
             color: '#333'
           }}>
-            Route Network
+            {t('routeNetwork')}
           </h2>
           <p style={{
             textAlign: 'center',
@@ -244,7 +208,7 @@ const Routes = () => {
             marginBottom: '2rem',
             fontSize: '1.1rem'
           }}>
-            Our extensive network covers major cities and towns across Tanzania
+            {t('extensiveNetwork')}
           </p>
           
           <div style={{
@@ -263,7 +227,7 @@ const Routes = () => {
               color: '#666',
               fontSize: '1.1rem'
             }}>
-              Interactive route map coming soon
+              {t('interactiveMap')}
             </p>
           </div>
         </div>
@@ -281,14 +245,14 @@ const Routes = () => {
             fontWeight: 'bold',
             marginBottom: '1rem'
           }}>
-            Can't Find Your Route?
+            {t('cantFindRoute')}
           </h2>
           <p style={{
             fontSize: '1.1rem',
             marginBottom: '2rem',
             opacity: 0.9
           }}>
-            Contact us for custom routes and special arrangements
+            {t('contactCustomRoutes')}
           </p>
           <div style={{
             display: 'flex',
@@ -307,7 +271,7 @@ const Routes = () => {
               fontSize: '1.1rem',
               transition: 'transform 0.3s'
             }}>
-              Contact Us
+              {t('contactUs')}
             </a>
             <a href="/" style={{
               display: 'inline-block',
@@ -321,7 +285,7 @@ const Routes = () => {
               border: '2px solid white',
               transition: 'background-color 0.3s'
             }}>
-              Book Now
+              {t('bookNow')}
             </a>
           </div>
         </div>

@@ -1,69 +1,71 @@
 import React, { useState } from 'react';
 import { getImagePath, IMAGES } from '../utils/imageUtils';
+import { useLanguage } from '../context/LanguageContext';
 
 const Gallery = () => {
+  const { t } = useLanguage();
   const [selectedImage, setSelectedImage] = useState(null);
 
   const galleryImages = [
     {
       src: getImagePath(IMAGES.LOGO),
       alt: 'DN Kategaya Express Logo',
-      title: 'Company Logo'
+      title: t('companyLogo')
     },
     {
       src: getImagePath(IMAGES.BUS_FLEET_1),
       alt: 'DN Kategaya Express Bus Fleet',
-      title: 'Modern Bus Fleet'
+      title: t('modernBusFleet')
     },
     {
       src: getImagePath(IMAGES.BUS_FLEET_2),
       alt: 'DN Kategaya Express Bus Exterior',
-      title: 'Premium Bus Exterior'
+      title: t('premiumBusExterior')
     },
     {
       src: getImagePath(IMAGES.BUS_FLEET_3),
       alt: 'DN Kategaya Express Bus Service',
-      title: 'Professional Service'
+      title: t('professionalService')
     },
     {
       src: getImagePath(IMAGES.BUS_FLEET_4),
       alt: 'DN Kategaya Express Bus Interior',
-      title: 'Comfortable Interior'
+      title: t('comfortableInterior')
     },
     {
       src: getImagePath(IMAGES.BUS_FLEET_5),
       alt: 'DN Kategaya Express Bus Features',
-      title: 'Advanced Features'
+      title: t('advancedFeatures')
     },
     {
       src: getImagePath(IMAGES.BUS_FLEET_6),
       alt: 'DN Kategaya Express Bus Design',
-      title: 'Elegant Design'
+      title: t('elegantDesign')
     },
     {
       src: getImagePath(IMAGES.BUS_FLEET_7),
       alt: 'DN Kategaya Express Bus Quality',
-      title: 'Premium Quality'
+      title: t('premiumQuality')
     },
     {
       src: getImagePath(IMAGES.BUS_FLEET_8),
       alt: 'DN Kategaya Express Bus Safety',
-      title: 'Safety Features'
+      title: t('safetyFeatures')
     },
     {
       src: getImagePath(IMAGES.BUS_FLEET_9),
       alt: 'DN Kategaya Express Bus Comfort',
-      title: 'Passenger Comfort'
+      title: t('passengerComfort')
     },
     {
       src: getImagePath(IMAGES.BUS_FLEET_10),
       alt: 'DN Kategaya Express Bus Excellence',
-      title: 'Service Excellence'
+      title: t('serviceExcellence')
     },
     {
       src: getImagePath(IMAGES.BUS_FLEET_11),
       alt: 'DN Kategaya Express Bus Fleet Overview',
-      title: 'Fleet Overview'
+      title: t('fleetOverview')
     }
   ];
 
@@ -95,14 +97,14 @@ const Gallery = () => {
             marginBottom: '1.5rem',
             textShadow: '0 2px 4px rgba(0,0,0,0.3)'
           }}>
-            Our Gallery
+            {t('ourGallery')}
           </h1>
           <p style={{
             fontSize: '1.3rem',
             opacity: 0.95,
             lineHeight: 1.6
           }}>
-            Discover our modern fleet and premium transportation services
+            {t('discoverFleet')}
           </p>
         </div>
       </div>
@@ -205,7 +207,7 @@ const Gallery = () => {
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text'
           }}>
-            Why Choose DN Kategaya Express
+            {t('whyChooseDN')}
           </h2>
 
           <div style={{
@@ -235,10 +237,10 @@ const Gallery = () => {
                 marginBottom: '1.5rem',
                 color: '#333'
               }}>
-                Modern Fleet
+                {t('modernFleet')}
               </h3>
               <p style={{ color: '#666', lineHeight: 1.8, fontSize: '1.1rem' }}>
-                Our buses feature the latest amenities, climate control, and entertainment systems for ultimate comfort and safety
+                {t('modernFleetDesc')}
               </p>
             </div>
 
@@ -264,10 +266,10 @@ const Gallery = () => {
                 marginBottom: '1.5rem',
                 color: '#333'
               }}>
-                Punctual Service
+                {t('punctualService')}
               </h3>
               <p style={{ color: '#666', lineHeight: 1.8, fontSize: '1.1rem' }}>
-                We value your time and ensure all departures and arrivals are on schedule with real-time tracking
+                {t('punctualServiceDesc')}
               </p>
             </div>
 
@@ -293,10 +295,10 @@ const Gallery = () => {
                 marginBottom: '1.5rem',
                 color: '#333'
               }}>
-                Safety First
+                {t('safetyFirst')}
               </h3>
               <p style={{ color: '#666', lineHeight: 1.8, fontSize: '1.1rem' }}>
-                Professional drivers, regular maintenance, and advanced safety features for your complete peace of mind
+                {t('safetyFirstDesc')}
               </p>
             </div>
           </div>
@@ -338,7 +340,7 @@ const Gallery = () => {
             position: 'relative',
             zIndex: 1
           }}>
-            Ready to Travel?
+            {t('readyToTravel')}
           </h2>
           <p style={{
             fontSize: '1.3rem',
@@ -347,7 +349,7 @@ const Gallery = () => {
             position: 'relative',
             zIndex: 1
           }}>
-            Book your journey with DN Kategaya Express today and experience premium transportation
+            {t('bookJourney')}
           </p>
           <a href="/" style={{
             display: 'inline-block',
@@ -372,7 +374,7 @@ const Gallery = () => {
             e.currentTarget.style.boxShadow = '0 8px 25px rgba(0,0,0,0.2)';
           }}
           >
-            Book Now
+            {t('bookNow')}
           </a>
         </div>
       </div>

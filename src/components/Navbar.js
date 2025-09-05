@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../context/LanguageContext';
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const { t, toggleLanguage, getLanguageFlag, getLanguageName } = useLanguage();
 
   return (
     <nav style={{
@@ -46,17 +47,45 @@ const Navbar = () => {
               DN Kategaya Express
             </h1>
             <p style={{ fontSize: '0.8rem', color: '#666', margin: 0 }}>
-              Your Journey, Our Priority
+              {t('yourJourneyPriority')}
             </p>
           </div>
         </Link>
 
         {/* Desktop Navigation */}
-        <div style={{ display: 'flex', gap: '2rem' }}>
-          <Link to="/" style={{ textDecoration: 'none', color: '#333', fontWeight: 500 }}>Home</Link>
-          <Link to="/support" style={{ textDecoration: 'none', color: '#333', fontWeight: 500 }}>Support</Link>
-          <Link to="/policy/terms" style={{ textDecoration: 'none', color: '#333', fontWeight: 500 }}>Terms</Link>
-          <Link to="/policy/privacy" style={{ textDecoration: 'none', color: '#333', fontWeight: 500 }}>Privacy</Link>
+        <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
+          <Link to="/" style={{ textDecoration: 'none', color: '#333', fontWeight: 500 }}>{t('home')}</Link>
+          <Link to="/routes" style={{ textDecoration: 'none', color: '#333', fontWeight: 500 }}>{t('routes')}</Link>
+          <Link to="/gallery" style={{ textDecoration: 'none', color: '#333', fontWeight: 500 }}>{t('gallery')}</Link>
+          <Link to="/contact" style={{ textDecoration: 'none', color: '#333', fontWeight: 500 }}>{t('contact')}</Link>
+          
+          {/* Language Toggle Button */}
+          <button
+            onClick={toggleLanguage}
+            style={{
+              background: 'linear-gradient(135deg, #E10600, #FFD700)',
+              color: 'white',
+              border: 'none',
+              padding: '0.5rem 1rem',
+              borderRadius: '20px',
+              fontSize: '0.9rem',
+              fontWeight: 600,
+              cursor: 'pointer',
+              transition: 'all 0.3s',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.5rem'
+            }}
+            onMouseEnter={(e) => {
+              e.target.style.transform = 'scale(1.05)';
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.transform = 'scale(1)';
+            }}
+          >
+            <span>{getLanguageFlag()}</span>
+            <span>{getLanguageName()}</span>
+          </button>
         </div>
       </div>
     </nav>

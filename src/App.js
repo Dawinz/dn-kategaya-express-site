@@ -5,7 +5,6 @@ import React, { useState } from 'react';
 import Home from './pages/Home';
 import RoutesPage from './pages/Routes';
 import Contact from './pages/Contact';
-import Book from './pages/Book';
 import Gallery from './pages/Gallery';
 import { LanguageProvider } from './context/LanguageContext';
 
@@ -25,7 +24,6 @@ function App() {
             <Route path="/routes" element={<RoutesPage />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/book" element={<Book />} />
           </Routes>
         </main>
         
@@ -34,7 +32,7 @@ function App() {
         
         {/* Global WhatsApp Floating Button */}
         <a
-          href="https://wa.me/255755478744"
+          href="https://wa.me/255743655381"
           target="_blank"
           rel="noopener noreferrer"
           style={{

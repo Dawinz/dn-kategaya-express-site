@@ -1,6 +1,9 @@
 import React from 'react';
+import { useLanguage } from '../context/LanguageContext';
 
 const Hero = () => {
+  const { t } = useLanguage();
+  
   return (
     <section style={{
       background: 'linear-gradient(135deg, #E10600, #FFD700, #0057FF)',
@@ -21,20 +24,20 @@ const Hero = () => {
           fontWeight: 'bold',
           marginBottom: '1rem'
         }}>
-          Travel Across Tanzania
+          {t('travelAcrossTanzania')}
         </h1>
         <p style={{
           fontSize: '1.2rem',
           marginBottom: '0.5rem',
           opacity: 0.9
         }}>
-          Your trusted partner for safe and comfortable bus transportation across Tanzania
+          {t('trustedPartner')}
         </p>
         <p style={{
           fontSize: '1rem',
           opacity: 0.8
         }}>
-          Experience the beauty of Tanzania with reliable, punctual, and comfortable bus services
+          {t('experienceBeauty')}
         </p>
       </div>
     </section>
