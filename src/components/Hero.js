@@ -4,13 +4,19 @@ import SearchForm from './SearchForm';
 
 const Hero = ({ setIsBookingDialogOpen }) => {
   const [ctaImage, setCtaImage] = useState(IMAGES.CTA_DESKTOP);
+  const [isMobile, setIsMobile] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
 
-  // Responsive image selection
+  // Responsive image selection and screen size detection
   useEffect(() => {
     const updateImage = () => {
-      if (window.innerWidth < 768) {
+      const width = window.innerWidth;
+      setIsMobile(width < 768);
+      setIsTablet(width >= 768 && width < 1200);
+      
+      if (width < 768) {
         setCtaImage(IMAGES.CTA_MOBILE);
-      } else if (window.innerWidth < 1200) {
+      } else if (width < 1200) {
         setCtaImage(IMAGES.CTA_TABLET);
       } else {
         setCtaImage(IMAGES.CTA_DESKTOP);
@@ -30,11 +36,11 @@ const Hero = ({ setIsBookingDialogOpen }) => {
       backgroundRepeat: 'no-repeat',
       backgroundAttachment: 'scroll',
       color: 'white',
-      padding: '4rem 0',
+      padding: isMobile ? '2rem 0' : '4rem 0',
       textAlign: 'center',
       position: 'relative',
       overflow: 'hidden',
-      minHeight: '100vh',
+      minHeight: isMobile ? '80vh' : '100vh',
       width: '100%'
     }}>
       <div style={{
@@ -42,16 +48,17 @@ const Hero = ({ setIsBookingDialogOpen }) => {
         zIndex: 0,
         maxWidth: '1200px',
         margin: '0 auto',
-        padding: '0 2rem',
+        padding: isMobile ? '0 1rem' : '0 2rem',
         display: 'flex',
-        justifyContent: 'flex-end',
+        justifyContent: isMobile ? 'center' : 'flex-end',
         alignItems: 'center',
-        minHeight: '400px'
+        minHeight: isMobile ? '300px' : '400px'
       }}>
         <div style={{
-          transform: 'scale(0.9)',
+          transform: isMobile ? 'scale(0.7)' : isTablet ? 'scale(0.8)' : 'scale(0.9)',
           transformOrigin: 'center',
-          maxWidth: '500px'
+          maxWidth: isMobile ? '100%' : '500px',
+          width: isMobile ? '100%' : 'auto'
         }}>
           <SearchForm setIsBookingDialogOpen={setIsBookingDialogOpen} />
         </div>

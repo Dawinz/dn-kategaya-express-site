@@ -1,50 +1,62 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 
 const Footer = () => {
   const { t } = useLanguage();
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
   
   return (
     <footer style={{
       background: '#1a1a1a',
       color: 'white',
-      padding: '3rem 0 1rem 0'
+      padding: isMobile ? '2rem 0 1rem 0' : '3rem 0 1rem 0'
     }}>
       <div style={{
         maxWidth: '1200px',
         margin: '0 auto',
-        padding: '0 2rem'
+        padding: isMobile ? '0 1rem' : '0 2rem'
       }}>
         {/* Main Footer Content */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-          gap: '2rem',
+          gridTemplateColumns: isMobile ? '1fr' : 'repeat(auto-fit, minmax(250px, 1fr))',
+          gap: isMobile ? '1.5rem' : '2rem',
           marginBottom: '2rem'
         }}>
           
           {/* Company Info Section */}
-          <div style={{ gridColumn: 'span 2' }}>
+          <div style={{ gridColumn: isMobile ? 'span 1' : 'span 2' }}>
             <div style={{
               display: 'flex',
               alignItems: 'center',
-              gap: '1rem',
-              marginBottom: '1rem'
+              gap: isMobile ? '0.5rem' : '1rem',
+              marginBottom: '1rem',
+              flexDirection: isMobile ? 'column' : 'row',
+              textAlign: isMobile ? 'center' : 'left'
             }}>
               <img
                 src={`${window.location.origin}/images/logo.jpeg`}
                 alt="DNKategaya Express Logo"
                 style={{
-                  width: '50px',
-                  height: '50px',
+                  width: isMobile ? '40px' : '50px',
+                  height: isMobile ? '40px' : '50px',
                   borderRadius: '8px',
                   objectFit: 'cover'
                 }}
               />
               <div>
                 <h3 style={{
-                  fontSize: '1.5rem',
+                  fontSize: isMobile ? '1.2rem' : '1.5rem',
                   fontWeight: 'bold',
                   background: 'linear-gradient(135deg, #E10600, #FFD700, #0057FF)',
                   WebkitBackgroundClip: 'text',
@@ -54,7 +66,7 @@ const Footer = () => {
                 }}>
                   DNKategaya Express
                 </h3>
-                <p style={{ fontSize: '0.8rem', color: '#999', margin: 0 }}>
+                <p style={{ fontSize: isMobile ? '0.7rem' : '0.8rem', color: '#999', margin: 0 }}>
                   {t('yourJourneyPriority')}
                 </p>
               </div>

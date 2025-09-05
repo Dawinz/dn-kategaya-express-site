@@ -13,7 +13,18 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
   });
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
+  const [isMobile, setIsMobile] = useState(false);
   const scrollManagerRef = useRef(null);
+
+  // Check if mobile
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   // Cleanup scroll manager on component unmount
   useEffect(() => {
@@ -165,17 +176,17 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
     <div style={{ marginBottom: '2rem' }}>
       <div style={{
         background: 'linear-gradient(135deg, rgba(225,6,0,0.95), rgba(255,215,0,0.95), rgba(0,87,255,0.95))',
-        padding: '1.5rem',
+        padding: isMobile ? '1rem' : '1.5rem',
         borderRadius: '12px',
         boxShadow: '0 8px 20px rgba(0,0,0,0.15)',
-        maxWidth: '800px',
+        maxWidth: isMobile ? '100%' : '800px',
         margin: '0 auto'
       }}>
       <form onSubmit={handleSubmit} style={{ marginBottom: '0' }}>
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
-          gap: '0.75rem',
+          gridTemplateColumns: isMobile ? '1fr' : 'repeat(auto-fit, minmax(180px, 1fr))',
+          gap: isMobile ? '0.5rem' : '0.75rem',
           marginBottom: '1rem'
         }}>
           {/* From */}
@@ -185,7 +196,7 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
               fontWeight: 600,
               marginBottom: '0.4rem',
               color: 'white',
-              fontSize: '0.85rem'
+              fontSize: isMobile ? '0.7rem' : '0.85rem'
             }}>
               {t('from')}
             </label>
@@ -195,10 +206,10 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
               onChange={handleInputChange}
               style={{
                 width: '100%',
-                padding: '0.6rem',
+                padding: isMobile ? '0.4rem' : '0.6rem',
                 border: '2px solid transparent',
                 borderRadius: '8px',
-                fontSize: '0.9rem',
+                fontSize: isMobile ? '0.7rem' : '0.9rem',
                 transition: 'box-shadow 0.3s, transform 0.2s',
                 background: 'linear-gradient(white, white) padding-box, linear-gradient(135deg, #FFD700, #E10600) border-box',
                 boxShadow: '0 4px 12px rgba(0,0,0,0.06)'
@@ -218,7 +229,7 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
               fontWeight: 600,
               marginBottom: '0.4rem',
               color: 'white',
-              fontSize: '0.85rem'
+              fontSize: isMobile ? '0.7rem' : '0.85rem'
             }}>
               {t('to')}
             </label>
@@ -228,10 +239,10 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
               onChange={handleInputChange}
               style={{
                 width: '100%',
-                padding: '0.75rem',
+                padding: isMobile ? '0.4rem' : '0.75rem',
                 border: '2px solid transparent',
                 borderRadius: '10px',
-                fontSize: '1rem',
+                fontSize: isMobile ? '0.7rem' : '1rem',
                 transition: 'box-shadow 0.3s, transform 0.2s',
                 background: 'linear-gradient(white, white) padding-box, linear-gradient(135deg, #0057FF, #FFD700) border-box',
                 boxShadow: '0 6px 18px rgba(0,0,0,0.08)'
@@ -251,7 +262,7 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
               fontWeight: 600,
               marginBottom: '0.4rem',
               color: 'white',
-              fontSize: '0.85rem'
+              fontSize: isMobile ? '0.7rem' : '0.85rem'
             }}>
               {t('date')}
             </label>
@@ -263,10 +274,10 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
               min={new Date().toISOString().split('T')[0]}
               style={{
                 width: '100%',
-                padding: '0.75rem',
+                padding: isMobile ? '0.4rem' : '0.75rem',
                 border: '2px solid transparent',
                 borderRadius: '10px',
-                fontSize: '1rem',
+                fontSize: isMobile ? '0.7rem' : '1rem',
                 transition: 'box-shadow 0.3s, transform 0.2s',
                 background: 'linear-gradient(white, white) padding-box, linear-gradient(135deg, #E10600, #FFD700) border-box',
                 boxShadow: '0 6px 18px rgba(0,0,0,0.08)'
@@ -281,7 +292,7 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
               fontWeight: 600,
               marginBottom: '0.4rem',
               color: 'white',
-              fontSize: '0.85rem'
+              fontSize: isMobile ? '0.7rem' : '0.85rem'
             }}>
               {t('passengers')}
             </label>
@@ -291,10 +302,10 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
               onChange={handleInputChange}
               style={{
                 width: '100%',
-                padding: '0.75rem',
+                padding: isMobile ? '0.4rem' : '0.75rem',
                 border: '2px solid transparent',
                 borderRadius: '10px',
-                fontSize: '1rem',
+                fontSize: isMobile ? '0.7rem' : '1rem',
                 transition: 'box-shadow 0.3s, transform 0.2s',
                 background: 'linear-gradient(white, white) padding-box, linear-gradient(135deg, #FFD700, #0057FF) border-box',
                 boxShadow: '0 6px 18px rgba(0,0,0,0.08)'
@@ -332,9 +343,9 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
               background: isLoading ? '#ccc' : 'linear-gradient(135deg, #FFD700, #E10600, #0057FF)',
               color: 'white',
               border: 'none',
-              padding: '0.8rem 1.8rem',
+              padding: isMobile ? '0.6rem 1.2rem' : '0.8rem 1.8rem',
               borderRadius: '999px',
-              fontSize: '1rem',
+              fontSize: isMobile ? '0.8rem' : '1rem',
               fontWeight: 700,
               cursor: isLoading ? 'not-allowed' : 'pointer',
               transition: 'transform 0.2s, box-shadow 0.3s',
