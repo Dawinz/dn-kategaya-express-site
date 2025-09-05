@@ -217,7 +217,7 @@ const Routes = () => {
 
         {/* Call to Action */}
         <div style={{
-          background: `linear-gradient(135deg, rgba(225,6,0,0.85), rgba(255,215,0,0.85)), url(${getImagePath(IMAGES.BUS_FLEET_1)})`,
+          background: `linear-gradient(135deg, rgba(225,6,0,0.85), rgba(255,215,0,0.85)), url(${getImagePath(IMAGES.BUS_FLEET_2)})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
