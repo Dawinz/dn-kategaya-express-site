@@ -24,7 +24,7 @@ const Hero = ({ setIsBookingDialogOpen }) => {
   
   return (
     <section style={{
-      background: `linear-gradient(135deg, rgba(225,6,0,0.6), rgba(255,215,0,0.6)), url(${getImagePathAbsolute(ctaImage)})`,
+      background: `url(${getImagePathAbsolute(ctaImage)})`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
