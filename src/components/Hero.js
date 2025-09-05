@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getImagePathAbsolute, IMAGES } from '../utils/imageUtils';
+import { getImagePathPublic, IMAGES } from '../utils/imageUtils';
 import SearchForm from './SearchForm';
 
 const Hero = ({ setIsBookingDialogOpen }) => {
@@ -24,17 +24,18 @@ const Hero = ({ setIsBookingDialogOpen }) => {
   
   return (
     <section style={{
-      background: `url(${getImagePathAbsolute(ctaImage)})`,
+      backgroundImage: `url(${getImagePathPublic(ctaImage)})`,
       backgroundSize: 'cover',
-      backgroundPosition: 'center',
+      backgroundPosition: 'center center',
       backgroundRepeat: 'no-repeat',
-      backgroundAttachment: 'fixed',
+      backgroundAttachment: 'scroll',
       color: 'white',
       padding: '4rem 0',
       textAlign: 'center',
       position: 'relative',
       overflow: 'hidden',
-      minHeight: '100vh'
+      minHeight: '100vh',
+      width: '100%'
     }}>
       <div style={{
         position: 'relative',
