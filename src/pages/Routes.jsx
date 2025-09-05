@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { getImagePath, IMAGES } from '../utils/imageUtils';
+import { getImagePathAbsolute, IMAGES } from '../utils/imageUtils';
 
 const Routes = () => {
   const { t } = useLanguage();
@@ -217,7 +217,7 @@ const Routes = () => {
 
         {/* Call to Action */}
         <div style={{
-          background: `linear-gradient(135deg, rgba(225,6,0,0.85), rgba(255,215,0,0.85)), url(${getImagePath(IMAGES.BUS_FLEET_2)})`,
+          background: `linear-gradient(135deg, rgba(225,6,0,0.85), rgba(255,215,0,0.85)), url('/images/bus-fleet-2.jpeg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
