@@ -38,5 +38,8 @@ export const IMAGES = {
   BUS_FLEET_8: 'bus-fleet-8.jpeg',
   BUS_FLEET_9: 'bus-fleet-9.jpeg',
   BUS_FLEET_10: 'bus-fleet-10.jpeg',
-  BUS_FLEET_11: 'bus-fleet-11.jpeg'
+  BUS_FLEET_11: 'bus-fleet-11.jpeg',
+  BUS_FLEET_12: 'bus-fleet-12.jpeg',
+  BUS_FLEET_13: 'bus-fleet-13.jpeg',
+  BUS_FLEET_14: 'bus-fleet-14.jpeg'
 };
