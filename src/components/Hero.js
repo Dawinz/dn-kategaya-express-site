@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { getImagePathAbsolute, IMAGES } from '../utils/imageUtils';
+import SearchForm from './SearchForm';
 
-const Hero = () => {
-  const { t } = useLanguage();
+const Hero = ({ setIsBookingDialogOpen }) => {
   const [ctaImage, setCtaImage] = useState(IMAGES.CTA_DESKTOP);
 
   // Responsive image selection
@@ -35,6 +35,15 @@ const Hero = () => {
       position: 'relative',
       overflow: 'hidden'
     }}>
+      <div style={{
+        position: 'relative',
+        zIndex: 2,
+        maxWidth: '1000px',
+        margin: '0 auto',
+        padding: '0 2rem'
+      }}>
+        <SearchForm setIsBookingDialogOpen={setIsBookingDialogOpen} />
+      </div>
     </section>
   );
 };

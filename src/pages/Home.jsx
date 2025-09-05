@@ -12,37 +12,8 @@ const Home = ({ setIsBookingDialogOpen }) => {
   return (
     <div>
       {/* Hero Section */}
-      <Hero />
+      <Hero setIsBookingDialogOpen={setIsBookingDialogOpen} />
       
-      {/* Search Section */}
-      <section style={{
-        background: '#f8f9fa',
-        padding: '3rem 0'
-      }}>
-        <div style={{
-          maxWidth: '1000px',
-          margin: '0 auto',
-          padding: '0 2rem'
-        }}>
-          <div style={{
-            background: 'white',
-            borderRadius: '16px',
-            padding: '2rem',
-            boxShadow: '0 10px 30px rgba(0,0,0,0.1)'
-          }}>
-            <h2 style={{
-              textAlign: 'center',
-              fontSize: '2rem',
-              fontWeight: 'bold',
-              marginBottom: '2rem',
-              color: '#333'
-            }}>
-              {t('findPerfectJourney')}
-            </h2>
-            <SearchForm setIsBookingDialogOpen={setIsBookingDialogOpen} prefillData={prefillData} />
-          </div>
-        </div>
-      </section>
 
       {/* Features Section */}
       <section style={{
