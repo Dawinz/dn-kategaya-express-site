@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { useLanguage } from '../context/LanguageContext';
 import { getImagePathAbsolute, IMAGES } from '../utils/imageUtils';
 import SearchForm from './SearchForm';
 
@@ -37,12 +36,17 @@ const Hero = ({ setIsBookingDialogOpen }) => {
     }}>
       <div style={{
         position: 'relative',
-        zIndex: 2,
-        maxWidth: '1000px',
+        zIndex: 1,
+        maxWidth: '600px',
         margin: '0 auto',
         padding: '0 2rem'
       }}>
-        <SearchForm setIsBookingDialogOpen={setIsBookingDialogOpen} />
+        <div style={{
+          transform: 'scale(0.8)',
+          transformOrigin: 'center'
+        }}>
+          <SearchForm setIsBookingDialogOpen={setIsBookingDialogOpen} />
+        </div>
       </div>
     </section>
   );

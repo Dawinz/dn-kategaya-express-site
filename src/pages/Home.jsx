@@ -1,12 +1,8 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
 import Hero from '../components/Hero';
-import SearchForm from '../components/SearchForm';
 import { useLanguage } from '../context/LanguageContext';
 
 const Home = ({ setIsBookingDialogOpen }) => {
-  const location = useLocation();
-  const prefillData = location.state?.prefillForm;
   const { t } = useLanguage();
   
   return (
