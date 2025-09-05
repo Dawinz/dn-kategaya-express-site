@@ -36,14 +36,19 @@ const Hero = ({ setIsBookingDialogOpen }) => {
     }}>
       <div style={{
         position: 'relative',
-        zIndex: 1,
-        maxWidth: '600px',
+        zIndex: 0,
+        maxWidth: '1200px',
         margin: '0 auto',
-        padding: '0 2rem'
+        padding: '0 2rem',
+        display: 'flex',
+        justifyContent: 'flex-end',
+        alignItems: 'center',
+        minHeight: '400px'
       }}>
         <div style={{
-          transform: 'scale(0.8)',
-          transformOrigin: 'center'
+          transform: 'scale(0.9)',
+          transformOrigin: 'center',
+          maxWidth: '500px'
         }}>
           <SearchForm setIsBookingDialogOpen={setIsBookingDialogOpen} />
         </div>
