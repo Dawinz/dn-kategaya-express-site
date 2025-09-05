@@ -152,7 +152,7 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
     }
   };
 
-  // Common routes for DN Kategaya Express
+  // Common routes for DNKategaya Express
   const popularRoutes = [
     { name: 'MWANZA MWZ', value: 'Mwanza' },
     { name: 'BUKOBA BKB', value: 'Bukoba' },

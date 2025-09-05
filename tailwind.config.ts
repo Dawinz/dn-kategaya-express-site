@@ -6,20 +6,20 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // DN Kategaya Express brand colors
+        // DNKategaya Express brand colors
         primary: {
-          red: '#E10600',      // DN Kategaya red
-          yellow: '#FFD700',   // DN Kategaya yellow
-          blue: '#0057FF',     // DN Kategaya blue
-          black: '#000000',    // DN Kategaya black
-          white: '#FFFFFF',    // DN Kategaya white
+          red: '#E10600',      // DNKategaya red
+          yellow: '#FFD700',   // DNKategaya yellow
+          blue: '#0057FF',     // DNKategaya blue
+          black: '#000000',    // DNKategaya black
+          white: '#FFFFFF',    // DNKategaya white
         },
         // Legacy zuberi colors for backward compatibility
         zuberi: {
           navy: '#1A1C5A',
-          red: '#E10600',      // Updated to DN Kategaya red
+          red: '#E10600',      // Updated to DNKategaya red
           silver: '#D4D4D4',
-          lime: '#FFD700',     // Updated to DN Kategaya yellow
+          lime: '#FFD700',     // Updated to DNKategaya yellow
         }
       },
       fontFamily: {

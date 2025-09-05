@@ -191,7 +191,7 @@ const Home = ({ setIsBookingDialogOpen }) => {
             }}>
               <img
                 src={`${window.location.origin}/images/bus-fleet-10.jpeg`}
-                alt="DN Kategaya Express Bus"
+                alt="DNKategaya Express Bus"
                 style={{
                   width: '100%',
                   height: '100%',
@@ -207,7 +207,7 @@ const Home = ({ setIsBookingDialogOpen }) => {
             }}>
               <img
                 src={`${window.location.origin}/images/bus-fleet-9.jpeg`}
-                alt="DN Kategaya Express Bus Interior"
+                alt="DNKategaya Express Bus Interior"
                 style={{
                   width: '100%',
                   height: '100%',
@@ -223,7 +223,7 @@ const Home = ({ setIsBookingDialogOpen }) => {
             }}>
               <img
                 src={`${window.location.origin}/images/bus-fleet-8.jpeg`}
-                alt="DN Kategaya Express Bus Service"
+                alt="DNKategaya Express Bus Service"
                 style={{
                   width: '100%',
                   height: '100%',

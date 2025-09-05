@@ -9,19 +9,19 @@ const Gallery = () => {
     {
       id: 1,
       src: '/images/WhatsApp Image 2025-08-23 at 20.33.00.jpeg',
-      alt: 'DN Kategaya Express Bus - Premium Fleet',
+      alt: 'DNKategaya Express Bus - Premium Fleet',
       title: 'Premium Fleet'
     },
     {
       id: 2,
       src: '/images/WhatsApp Image 2025-08-23 at 20.29.24.jpeg',
-      alt: 'DN Kategaya Express Bus - Modern Buses',
+      alt: 'DNKategaya Express Bus - Modern Buses',
       title: 'Modern Buses'
     },
     {
       id: 3,
       src: '/images/WhatsApp Image 2025-08-23 at 20.31.43.jpeg',
-      alt: 'DN Kategaya Express Bus - Professional Service',
+      alt: 'DNKategaya Express Bus - Professional Service',
       title: 'Reliable Service'
     }
   ];

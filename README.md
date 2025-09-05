@@ -1,10 +1,10 @@
-# DN Kategaya Express - Bus Booking Website
+# DNKategaya Express - Bus Booking Website
 
-A modern React-based bus booking website for DN Kategaya Express, providing premium bus transportation services across Tanzania.
+A modern React-based bus booking website for DNKategaya Express, providing premium bus transportation services across Tanzania.
 
 ## 🚌 About
 
-DN Kategaya Express offers safe, comfortable, and reliable bus transportation services in the Lake Victoria region of Tanzania. This website allows customers to search for bus routes, book tickets, and manage their travel plans with an integrated SafariYetu booking system.
+DNKategaya Express offers safe, comfortable, and reliable bus transportation services in the Lake Victoria region of Tanzania. This website allows customers to search for bus routes, book tickets, and manage their travel plans with an integrated SafariYetu booking system.
 
 ## ✨ Features
 
@@ -114,7 +114,7 @@ The project can also be deployed to:
 ## 📱 Pages
 
 ### Home (`/`)
-- Hero section with DN Kategaya Express branding
+- Hero section with DNKategaya Express branding
 - Search form for bus tickets
 - Features and gallery showcase
 
@@ -161,9 +161,9 @@ The project can be deployed to any platform that supports React applications:
 
 ## 📄 License
 
-This project is proprietary software owned by DN Kategaya Express.
+This project is proprietary software owned by DNKategaya Express.
 
 ---
 
-**Built with ❤️ for DN Kategaya Express**
+**Built with ❤️ for DNKategaya Express**
 # dn-kategaya-express-site

@@ -26,7 +26,7 @@ const Navbar = () => {
         <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '1rem' }}>
           <img
             src={`${window.location.origin}/images/logo.jpeg`}
-            alt="DN Kategaya Express Logo"
+            alt="DNKategaya Express Logo"
             style={{
               width: '50px',
               height: '50px',
@@ -44,7 +44,7 @@ const Navbar = () => {
               backgroundClip: 'text',
               margin: 0
             }}>
-              DN Kategaya Express
+              DNKategaya Express
             </h1>
             <p style={{ fontSize: '0.8rem', color: '#666', margin: 0 }}>
               {t('yourJourneyPriority')}

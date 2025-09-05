@@ -34,7 +34,7 @@ const Footer = () => {
             }}>
               <img
                 src={`${window.location.origin}/images/logo.jpeg`}
-                alt="DN Kategaya Express Logo"
+                alt="DNKategaya Express Logo"
                 style={{
                   width: '50px',
                   height: '50px',
@@ -52,7 +52,7 @@ const Footer = () => {
                   backgroundClip: 'text',
                   margin: 0
                 }}>
-                  DN Kategaya Express
+                  DNKategaya Express
                 </h3>
                 <p style={{ fontSize: '0.8rem', color: '#999', margin: 0 }}>
                   {t('yourJourneyPriority')}
@@ -255,7 +255,7 @@ const Footer = () => {
             
             {/* Copyright */}
             <div style={{ color: '#999', fontSize: '0.9rem' }}>
-              © {new Date().getFullYear()} DN Kategaya Express. {t('allRightsReserved')}
+              © {new Date().getFullYear()} DNKategaya Express. {t('allRightsReserved')}
             </div>
           </div>
         </div>

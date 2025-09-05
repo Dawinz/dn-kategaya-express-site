@@ -89,7 +89,7 @@ const translations = {
     comfortableInterior: 'Comfortable Interior',
     modernFleet: 'Modern Fleet',
     professionalService: 'Professional Service',
-    premiumTravelExperience: 'DN Kategaya Express - Premium Travel Experience',
+    premiumTravelExperience: 'DNKategaya Express - Premium Travel Experience',
     clickToView: 'Click to view',
     
     // Footer
@@ -115,7 +115,7 @@ const translations = {
     
     // Additional Home Page Content
     findPerfectJourney: 'Find Your Perfect Journey',
-    whyChooseUs: 'Why Choose DN Kategaya Express',
+    whyChooseUs: 'Why Choose DNKategaya Express',
     experienceDifference: 'Experience the difference with our premium bus services',
     premiumComfort: 'Premium Comfort',
     premiumComfortDesc: 'Luxury seats, air conditioning, and spacious interiors for your comfort',
@@ -208,7 +208,7 @@ const translations = {
     passengerComfort: 'Passenger Comfort',
     serviceExcellence: 'Service Excellence',
     fleetOverview: 'Fleet Overview',
-    whyChooseDN: 'Why Choose DN Kategaya Express',
+    whyChooseDN: 'Why Choose DNKategaya Express',
     modernFleet: 'Modern Fleet',
     modernFleetDesc: 'Our buses feature the latest amenities, climate control, and entertainment systems for ultimate comfort and safety',
     punctualService: 'Punctual Service',
@@ -216,7 +216,7 @@ const translations = {
     safetyFirst: 'Safety First',
     safetyFirstDesc: 'Professional drivers, regular maintenance, and advanced safety features for your complete peace of mind',
     readyToTravel: 'Ready to Travel?',
-    bookJourney: 'Book your journey with DN Kategaya Express today and experience premium transportation',
+    bookJourney: 'Book your journey with DNKategaya Express today and experience premium transportation',
     clickToView: 'Click to view',
     
     // Footer
@@ -319,7 +319,7 @@ const translations = {
     comfortableInterior: 'Ndani ya Starehe',
     modernFleet: 'Mabasi ya Kisasa',
     professionalService: 'Huduma ya Kitaalamu',
-    premiumTravelExperience: 'DN Kategaya Express - Uzoefu wa Safari ya Kifahari',
+    premiumTravelExperience: 'DNKategaya Express - Uzoefu wa Safari ya Kifahari',
     clickToView: 'Bonyeza kuona',
     
     // Footer
@@ -345,7 +345,7 @@ const translations = {
     
     // Additional Home Page Content
     findPerfectJourney: 'Tafuta Safari Yako Bora',
-    whyChooseUs: 'Kwa Nini Uchague DN Kategaya Express',
+    whyChooseUs: 'Kwa Nini Uchague DNKategaya Express',
     experienceDifference: 'Ona tofauti na huduma zetu bora za mabasi',
     premiumComfort: 'Starehe ya Hali ya Juu',
     premiumComfortDesc: 'Viti vya kifahari, hewa baridi, na nafasi za starehe kwa safari yako',
@@ -438,7 +438,7 @@ const translations = {
     passengerComfort: 'Starehe ya Abiria',
     serviceExcellence: 'Ubora wa Huduma',
     fleetOverview: 'Muhtasari wa Mabasi',
-    whyChooseDN: 'Kwa Nini Uchague DN Kategaya Express',
+    whyChooseDN: 'Kwa Nini Uchague DNKategaya Express',
     modernFleet: 'Mabasi ya Kisasa',
     modernFleetDesc: 'Mabasi yetu yana vipengele vya hivi karibuni, udhibiti wa hali ya hewa, na mifumo ya burudani kwa starehe na usalama kamili',
     punctualService: 'Huduma ya Usahihi',
@@ -446,7 +446,7 @@ const translations = {
     safetyFirst: 'Usalama Kwanza',
     safetyFirstDesc: 'Madereva wa kitaalamu, matengenezo ya kawaida, na vipengele vya usalama vya juu kwa amani yako kamili',
     readyToTravel: 'Uko Tayari Kusafiri?',
-    bookJourney: 'Wekesha safari yako na DN Kategaya Express leo na pata uzoefu wa usafiri wa kifahari',
+    bookJourney: 'Wekesha safari yako na DNKategaya Express leo na pata uzoefu wa usafiri wa kifahari',
     clickToView: 'Bonyeza kuona',
     
     // Footer

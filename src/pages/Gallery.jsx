@@ -9,62 +9,62 @@ const Gallery = () => {
   const galleryImages = [
     {
       src: getImagePath(IMAGES.LOGO),
-      alt: 'DN Kategaya Express Logo',
+      alt: 'DNKategaya Express Logo',
       title: t('companyLogo')
     },
     {
       src: getImagePath(IMAGES.BUS_FLEET_1),
-      alt: 'DN Kategaya Express Bus Fleet',
+      alt: 'DNKategaya Express Bus Fleet',
       title: t('modernBusFleet')
     },
     {
       src: getImagePath(IMAGES.BUS_FLEET_2),
-      alt: 'DN Kategaya Express Bus Exterior',
+      alt: 'DNKategaya Express Bus Exterior',
       title: t('premiumBusExterior')
     },
     {
       src: getImagePath(IMAGES.BUS_FLEET_3),
-      alt: 'DN Kategaya Express Bus Service',
+      alt: 'DNKategaya Express Bus Service',
       title: t('professionalService')
     },
     {
       src: getImagePath(IMAGES.BUS_FLEET_4),
-      alt: 'DN Kategaya Express Bus Interior',
+      alt: 'DNKategaya Express Bus Interior',
       title: t('comfortableInterior')
     },
     {
       src: getImagePath(IMAGES.BUS_FLEET_5),
-      alt: 'DN Kategaya Express Bus Features',
+      alt: 'DNKategaya Express Bus Features',
       title: t('advancedFeatures')
     },
     {
       src: getImagePath(IMAGES.BUS_FLEET_6),
-      alt: 'DN Kategaya Express Bus Design',
+      alt: 'DNKategaya Express Bus Design',
       title: t('elegantDesign')
     },
     {
       src: getImagePath(IMAGES.BUS_FLEET_7),
-      alt: 'DN Kategaya Express Bus Quality',
+      alt: 'DNKategaya Express Bus Quality',
       title: t('premiumQuality')
     },
     {
       src: getImagePath(IMAGES.BUS_FLEET_8),
-      alt: 'DN Kategaya Express Bus Safety',
+      alt: 'DNKategaya Express Bus Safety',
       title: t('safetyFeatures')
     },
     {
       src: getImagePath(IMAGES.BUS_FLEET_9),
-      alt: 'DN Kategaya Express Bus Comfort',
+      alt: 'DNKategaya Express Bus Comfort',
       title: t('passengerComfort')
     },
     {
       src: getImagePath(IMAGES.BUS_FLEET_10),
-      alt: 'DN Kategaya Express Bus Excellence',
+      alt: 'DNKategaya Express Bus Excellence',
       title: t('serviceExcellence')
     },
     {
       src: getImagePath(IMAGES.BUS_FLEET_11),
-      alt: 'DN Kategaya Express Bus Fleet Overview',
+      alt: 'DNKategaya Express Bus Fleet Overview',
       title: t('fleetOverview')
     }
   ];
