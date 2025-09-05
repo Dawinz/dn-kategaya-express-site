@@ -8,7 +8,8 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
     from: prefillData?.from || '',
     to: prefillData?.to || '',
     date: '',
-    passengers: '1'
+    passengers: '1',
+    operatorId: '2898390482'
   });
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
@@ -92,6 +93,7 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
         destination: formData.to,
         departureDate: formData.date,
         passengersCount: parseInt(formData.passengers),
+        operatorId: formData.operatorId,
         onClose: () => {
           console.log('SafariYetu dialog closed via callback');
           setIsBookingDialogOpen(false);
@@ -112,7 +114,7 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
           scrollManagerRef.current.disableScroll();
           
           setTimeout(() => {
-            alert(`Mock Booking Dialog:\nFrom: ${formData.from}\nTo: ${formData.to}\nDate: ${formData.date}\nPassengers: ${formData.passengers}\n\nIn production, this would open SafariYetu booking system.`);
+            alert(`Mock Booking Dialog:\nFrom: ${formData.from}\nTo: ${formData.to}\nDate: ${formData.date}\nPassengers: ${formData.passengers}\nOperator ID: ${formData.operatorId}\n\nIn production, this would open SafariYetu booking system.`);
             
             // Simulate dialog closing
             if (scrollManagerRef.current) {
