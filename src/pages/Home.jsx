@@ -1,32 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useLocation } from 'react-router-dom';
 import Hero from '../components/Hero';
 import SearchForm from '../components/SearchForm';
 import { useLanguage } from '../context/LanguageContext';
-import { getImagePathAbsolute, IMAGES } from '../utils/imageUtils';
 
 const Home = ({ setIsBookingDialogOpen }) => {
   const location = useLocation();
   const prefillData = location.state?.prefillForm;
   const { t } = useLanguage();
-  const [ctaImage, setCtaImage] = useState(IMAGES.CTA_DESKTOP);
-
-  // Responsive image selection
-  useEffect(() => {
-    const updateImage = () => {
-      if (window.innerWidth < 768) {
-        setCtaImage(IMAGES.CTA_MOBILE);
-      } else if (window.innerWidth < 1200) {
-        setCtaImage(IMAGES.CTA_TABLET);
-      } else {
-        setCtaImage(IMAGES.CTA_DESKTOP);
-      }
-    };
-
-    updateImage();
-    window.addEventListener('resize', updateImage);
-    return () => window.removeEventListener('resize', updateImage);
-  }, []);
   
   return (
     <div>
@@ -518,105 +499,6 @@ const Home = ({ setIsBookingDialogOpen }) => {
         </div>
       </section>
 
-      {/* Call to Action Section */}
-      <section style={{
-        background: `linear-gradient(135deg, rgba(225,6,0,0.85), rgba(255,215,0,0.85)), url(${getImagePathAbsolute(ctaImage)})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        color: 'white',
-        padding: '4rem 2rem',
-        textAlign: 'center',
-        position: 'relative',
-        overflow: 'hidden'
-      }}>
-        <div style={{
-          maxWidth: '1200px',
-          margin: '0 auto',
-          position: 'relative',
-          zIndex: 2
-        }}>
-          <h2 style={{
-            fontSize: window.innerWidth < 768 ? '2rem' : window.innerWidth < 1200 ? '2.5rem' : '3rem',
-            fontWeight: 'bold',
-            marginBottom: '1rem',
-            textShadow: '2px 2px 4px rgba(0,0,0,0.5)'
-          }}>
-            {t('readyToTravel')}
-          </h2>
-          <p style={{
-            fontSize: window.innerWidth < 768 ? '1rem' : '1.2rem',
-            marginBottom: '2rem',
-            opacity: 0.95,
-            textShadow: '1px 1px 2px rgba(0,0,0,0.5)',
-            maxWidth: '600px',
-            margin: '0 auto 2rem auto'
-          }}>
-            {t('bookYourJourney')}
-          </p>
-          <div style={{
-            display: 'flex',
-            gap: '1rem',
-            justifyContent: 'center',
-            flexWrap: 'wrap'
-          }}>
-            <button
-              onClick={() => {
-                const searchSection = document.querySelector('section[style*="background: #f8f9fa"]');
-                if (searchSection) {
-                  searchSection.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-              style={{
-                background: 'white',
-                color: '#E10600',
-                border: 'none',
-                padding: window.innerWidth < 768 ? '0.8rem 1.5rem' : '1rem 2rem',
-                borderRadius: '8px',
-                fontSize: window.innerWidth < 768 ? '1rem' : '1.1rem',
-                fontWeight: '600',
-                cursor: 'pointer',
-                transition: 'transform 0.3s, box-shadow 0.3s',
-                boxShadow: '0 4px 15px rgba(0,0,0,0.2)'
-              }}
-              onMouseOver={(e) => {
-                e.target.style.transform = 'translateY(-2px)';
-                e.target.style.boxShadow = '0 6px 20px rgba(0,0,0,0.3)';
-              }}
-              onMouseOut={(e) => {
-                e.target.style.transform = 'translateY(0)';
-                e.target.style.boxShadow = '0 4px 15px rgba(0,0,0,0.2)';
-              }}
-            >
-              {t('bookNow')}
-            </button>
-            <a href="/contact" style={{
-              display: 'inline-block',
-              background: 'transparent',
-              color: 'white',
-              padding: window.innerWidth < 768 ? '0.8rem 1.5rem' : '1rem 2rem',
-              borderRadius: '8px',
-              textDecoration: 'none',
-              fontSize: window.innerWidth < 768 ? '1rem' : '1.1rem',
-              fontWeight: '600',
-              border: '2px solid white',
-              transition: 'background-color 0.3s, transform 0.3s',
-              boxShadow: '0 4px 15px rgba(0,0,0,0.2)'
-            }}
-            onMouseOver={(e) => {
-              e.target.style.backgroundColor = 'rgba(255,255,255,0.1)';
-              e.target.style.transform = 'translateY(-2px)';
-            }}
-            onMouseOut={(e) => {
-              e.target.style.backgroundColor = 'transparent';
-              e.target.style.transform = 'translateY(0)';
-            }}
-            >
-              {t('contactUs')}
-            </a>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };
