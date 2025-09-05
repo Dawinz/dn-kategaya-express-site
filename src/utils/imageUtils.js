@@ -41,5 +41,8 @@ export const IMAGES = {
   BUS_FLEET_11: 'bus-fleet-11.jpeg',
   BUS_FLEET_12: 'bus-fleet-12.jpeg',
   BUS_FLEET_13: 'bus-fleet-13.jpeg',
-  BUS_FLEET_14: 'bus-fleet-14.jpeg'
+  BUS_FLEET_14: 'bus-fleet-14.jpeg',
+  CTA_MOBILE: 'cta-mobile.png',
+  CTA_TABLET: 'cta-tablet.png',
+  CTA_DESKTOP: 'cta-desktop.png'
 };
