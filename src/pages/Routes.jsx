@@ -1,9 +1,12 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { getImagePathAbsolute, IMAGES } from '../utils/imageUtils';
 
 const Routes = () => {
   const { t } = useLanguage();
+  
+  // Debug image path
+  const imagePath = `${process.env.PUBLIC_URL || ''}/images/bus-fleet-2.jpeg`;
+  console.log('Image path:', imagePath);
   const routes = [
     { from: 'Karagwe', to: 'Mwanza', duration: '2-3 hours', frequency: t('daily') },
     { from: 'Bukoba', to: 'Mwanza', duration: '3-4 hours', frequency: t('daily') },
@@ -217,7 +220,7 @@ const Routes = () => {
 
         {/* Call to Action */}
         <div style={{
-          background: `linear-gradient(135deg, rgba(225,6,0,0.85), rgba(255,215,0,0.85)), url('/images/bus-fleet-2.jpeg')`,
+          background: `linear-gradient(135deg, rgba(225,6,0,0.85), rgba(255,215,0,0.85)), url('${imagePath}')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
