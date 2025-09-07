@@ -39,17 +39,18 @@ const Footer = () => {
             <div style={{
               display: 'flex',
               flexDirection: 'column',
-              alignItems: 'center',
+              alignItems: isMobile ? 'center' : 'flex-start',
               gap: isMobile ? '0.5rem' : '0.75rem',
               marginBottom: '1rem',
-              textAlign: 'center'
+              textAlign: isMobile ? 'center' : 'left'
             }}>
               <div style={{
                 display: 'flex',
                 alignItems: 'center',
                 gap: isMobile ? '0.5rem' : '1rem',
                 flexDirection: isMobile ? 'column' : 'row',
-                textAlign: isMobile ? 'center' : 'left'
+                textAlign: isMobile ? 'center' : 'left',
+                justifyContent: isMobile ? 'center' : 'flex-start'
               }}>
                 <img
                   src={`${window.location.origin}/images/logo.jpeg`}
@@ -78,7 +79,8 @@ const Footer = () => {
                 color: '#999', 
                 margin: 0,
                 fontStyle: 'italic',
-                fontWeight: '500'
+                fontWeight: '500',
+                textAlign: isMobile ? 'center' : 'left'
               }}>
                 {t('yourJourneyPriority')}
               </p>
