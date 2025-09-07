@@ -31,7 +31,7 @@ const Navbar = () => {
       padding: isMobile ? '0.5rem 0' : '1rem 0',
       position: 'sticky',
       top: 0,
-      zIndex: 1000
+      zIndex: 100
     }}>
       <div style={{
         maxWidth: '1200px',
@@ -191,7 +191,7 @@ const Navbar = () => {
           top: '100%',
           left: 0,
           right: 0,
-          zIndex: 999,
+          zIndex: 99,
           boxShadow: '0 4px 10px rgba(0,0,0,0.1)'
         }}>
           <div style={{
