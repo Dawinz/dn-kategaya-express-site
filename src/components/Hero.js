@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { getImagePathPublic, IMAGES } from '../utils/imageUtils';
 import SearchForm from './SearchForm';
 
-const Hero = ({ setIsBookingDialogOpen }) => {
+const Hero = ({ setIsBookingDialogOpen, prefillData }) => {
   const [ctaImage, setCtaImage] = useState(IMAGES.CTA_DESKTOP);
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
@@ -62,7 +62,7 @@ const Hero = ({ setIsBookingDialogOpen }) => {
           width: isMobile ? '100%' : 'auto',
           padding: isMobile ? '2rem 1rem' : '0'
         }}>
-          <SearchForm setIsBookingDialogOpen={setIsBookingDialogOpen} />
+          <SearchForm setIsBookingDialogOpen={setIsBookingDialogOpen} prefillData={prefillData} />
         </div>
       </div>
     </section>

@@ -1,14 +1,19 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import Hero from '../components/Hero';
 import { useLanguage } from '../context/LanguageContext';
 
 const Home = ({ setIsBookingDialogOpen }) => {
   const { t } = useLanguage();
+  const location = useLocation();
+  
+  // Get pre-filled data from routes page
+  const prefillData = location.state?.prefillData || null;
   
   return (
     <div>
       {/* Hero Section */}
-      <Hero setIsBookingDialogOpen={setIsBookingDialogOpen} />
+      <Hero setIsBookingDialogOpen={setIsBookingDialogOpen} prefillData={prefillData} />
       
 
       {/* Features Section */}

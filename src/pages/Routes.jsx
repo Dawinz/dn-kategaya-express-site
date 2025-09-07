@@ -1,8 +1,22 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 
 const Routes = () => {
   const { t } = useLanguage();
+  const navigate = useNavigate();
+
+  const handleBookRoute = (from, to) => {
+    // Navigate to homepage with pre-filled route data
+    navigate('/', { 
+      state: { 
+        prefillData: { 
+          from: from, 
+          to: to 
+        } 
+      } 
+    });
+  };
   
   // Debug image path
   const imagePath = `${process.env.PUBLIC_URL || ''}/images/bus-fleet-2.jpeg`;
@@ -152,19 +166,28 @@ const Routes = () => {
                 </div>
               </div>
 
-              <button style={{
-                width: '100%',
-                background: '#E10600',
-                color: 'white',
-                border: 'none',
-                padding: '0.75rem',
-                borderRadius: '8px',
-                fontSize: '1rem',
-                fontWeight: '600',
-                cursor: 'pointer',
-                marginTop: '1rem',
-                transition: 'background-color 0.3s'
-              }}>
+              <button 
+                onClick={() => handleBookRoute(route.from, route.to)}
+                style={{
+                  width: '100%',
+                  background: '#E10600',
+                  color: 'white',
+                  border: 'none',
+                  padding: '0.75rem',
+                  borderRadius: '8px',
+                  fontSize: '1rem',
+                  fontWeight: '600',
+                  cursor: 'pointer',
+                  marginTop: '1rem',
+                  transition: 'background-color 0.3s'
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.backgroundColor = '#c40505';
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.backgroundColor = '#E10600';
+                }}
+              >
                 {t('bookThisRoute')}
               </button>
             </div>
