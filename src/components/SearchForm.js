@@ -389,6 +389,61 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
           <p>{t('tip')}</p>
         </div>
 
+        {/* Popular Routes Quick Links - Hidden on Mobile */}
+        {!isMobile && (
+          <div style={{
+            marginTop: '0.8rem',
+            textAlign: 'center'
+          }}>
+            <p style={{
+              fontSize: '0.8rem',
+              color: '#666',
+              marginBottom: '0.4rem'
+            }}>
+              {t('popularRoutesLabel')}
+            </p>
+            <div style={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              justifyContent: 'center',
+              gap: '0.5rem'
+            }}>
+              {[
+                { route: 'Karagwe - Mwanza', from: 'Karagwe', to: 'Mwanza' },
+                { route: 'Bukoba - Mwanza', from: 'Bukoba', to: 'Mwanza' },
+                { route: 'Mwanza - Karagwe', from: 'Mwanza', to: 'Karagwe' },
+                { route: 'Mwanza - Bukoba', from: 'Mwanza', to: 'Bukoba' }
+              ].map(({ route, from, to }) => (
+                <button
+                  key={route}
+                  onClick={() => {
+                    setFormData(prev => ({
+                      ...prev,
+                      from: from,
+                      to: to,
+                      date: new Date().toISOString().split('T')[0] // Today's date
+                    }));
+                    setError('');
+                  }}
+                  disabled={isLoading}
+                  style={{
+                    fontSize: '0.75rem',
+                    background: '#f8f9fa',
+                    border: '1px solid #e1e5e9',
+                    color: '#333',
+                    padding: '0.4rem 0.8rem',
+                    borderRadius: '16px',
+                    cursor: 'pointer',
+                    transition: 'all 0.3s'
+                  }}
+                >
+                  {route}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
             </form>
       </div>
       {/* SafariPlus Modal Container */}
