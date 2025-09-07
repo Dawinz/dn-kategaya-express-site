@@ -47,15 +47,16 @@ const Navbar = () => {
             src={`${window.location.origin}/images/logo.jpeg`}
             alt="DNKategaya Express Logo"
             style={{
-              width: isMobile ? '40px' : '50px',
-              height: isMobile ? '40px' : '50px',
-              borderRadius: '8px',
-              objectFit: 'cover'
+              width: isMobile ? '50px' : '50px',
+              height: isMobile ? '50px' : '50px',
+              borderRadius: '10px',
+              objectFit: 'cover',
+              boxShadow: isMobile ? '0 2px 8px rgba(0,0,0,0.15)' : 'none'
             }}
           />
           <div style={{ textAlign: 'center' }}>
             <h1 style={{
-              fontSize: isMobile ? '1.2rem' : '1.5rem',
+              fontSize: isMobile ? '1rem' : '1.5rem',
               fontWeight: 'bold',
               background: 'linear-gradient(135deg, #E10600, #FFD700, #0057FF)',
               WebkitBackgroundClip: 'text',
@@ -66,7 +67,7 @@ const Navbar = () => {
               DNKategaya Express
             </h1>
             <p style={{ 
-              fontSize: isMobile ? '0.7rem' : '0.8rem', 
+              fontSize: isMobile ? '0.6rem' : '0.8rem', 
               color: '#666', 
               margin: '2px 0 0 0',
               fontStyle: 'italic',
