@@ -14,7 +14,7 @@ const Home = ({ setIsBookingDialogOpen }) => {
       {/* Features Section */}
       <section style={{
         padding: '2rem 0',
-        background: 'linear-gradient(135deg, #f8f9fa 0%, #ffffff 50%, #f1f3f4 100%)'
+        background: 'linear-gradient(135deg, #e8f4f8 0%, #ffffff 50%, #f0f8ff 100%)'
       }}>
         <div style={{
           maxWidth: '1200px',
@@ -162,7 +162,7 @@ const Home = ({ setIsBookingDialogOpen }) => {
 
       {/* Bus Images Section */}
       <section style={{
-        background: 'linear-gradient(135deg, #e3f2fd 0%, #f8f9fa 50%, #e8f5e8 100%)',
+        background: 'linear-gradient(135deg, #bbdefb 0%, #c8e6c9 50%, #a5d6a7 100%)',
         padding: '2rem 0'
       }}>
         <div style={{
@@ -247,7 +247,7 @@ const Home = ({ setIsBookingDialogOpen }) => {
       {/* Popular Routes Section */}
       <section style={{
         padding: '2rem 0',
-        background: 'linear-gradient(135deg, #fff3e0 0%, #ffffff 50%, #f3e5f5 100%)'
+        background: 'linear-gradient(135deg, #ffcc80 0%, #ffffff 50%, #ce93d8 100%)'
       }}>
         <div style={{
           maxWidth: '1200px',
@@ -330,7 +330,7 @@ const Home = ({ setIsBookingDialogOpen }) => {
       {/* Testimonials Section */}
       <section style={{
         padding: '2rem 0',
-        background: 'linear-gradient(135deg, #f1f8e9 0%, #f8f9fa 50%, #e0f2f1 100%)'
+        background: 'linear-gradient(135deg, #c8e6c9 0%, #f8f9fa 50%, #80cbc4 100%)'
       }}>
         <div style={{
           maxWidth: '1200px',
