@@ -38,11 +38,11 @@ const Footer = () => {
           <div style={{ gridColumn: isMobile ? 'span 1' : 'span 2' }}>
             <div style={{
               display: 'flex',
+              flexDirection: 'column',
               alignItems: 'center',
-              gap: isMobile ? '0.5rem' : '1rem',
+              gap: isMobile ? '0.5rem' : '0.75rem',
               marginBottom: '1rem',
-              flexDirection: isMobile ? 'column' : 'row',
-              textAlign: isMobile ? 'center' : 'left'
+              textAlign: 'center'
             }}>
               <img
                 src={`${window.location.origin}/images/logo.jpeg`}
@@ -66,7 +66,13 @@ const Footer = () => {
                 }}>
                   DNKategaya Express
                 </h3>
-                <p style={{ fontSize: isMobile ? '0.7rem' : '0.8rem', color: '#999', margin: 0 }}>
+                <p style={{ 
+                  fontSize: isMobile ? '0.7rem' : '0.8rem', 
+                  color: '#999', 
+                  margin: '2px 0 0 0',
+                  fontStyle: 'italic',
+                  fontWeight: '500'
+                }}>
                   {t('yourJourneyPriority')}
                 </p>
               </div>
