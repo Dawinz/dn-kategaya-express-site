@@ -51,9 +51,9 @@ const Hero = ({ setIsBookingDialogOpen, prefillData }) => {
         padding: isMobile ? '0' : '0 2rem',
         display: 'flex',
         justifyContent: isMobile ? 'center' : 'flex-end',
-        alignItems: isMobile ? 'center' : 'center',
+        alignItems: isMobile ? 'flex-start' : 'center',
         minHeight: isMobile ? '100vh' : '400px',
-        paddingTop: isMobile ? '0' : '0'
+        paddingTop: isMobile ? '2rem' : '0'
       }}>
         <div style={{
           transform: isMobile ? 'scale(1)' : isTablet ? 'scale(0.8)' : 'scale(0.9)',
