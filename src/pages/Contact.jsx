@@ -31,7 +31,7 @@ const Contact = () => {
       <div style={{
         background: 'linear-gradient(135deg, #E10600, #FFD700, #0057FF)',
         color: 'white',
-        padding: '4rem 0',
+        padding: '2.5rem 0',
         textAlign: 'center'
       }}>
         <div style={{
@@ -40,14 +40,14 @@ const Contact = () => {
           padding: '0 2rem'
         }}>
           <h1 style={{
-            fontSize: '3rem',
+            fontSize: '2.5rem',
             fontWeight: 'bold',
-            marginBottom: '1rem'
+            marginBottom: '0.75rem'
           }}>
             {t('contactUs')}
           </h1>
           <p style={{
-            fontSize: '1.2rem',
+            fontSize: '1.1rem',
             opacity: 0.9
           }}>
             {t('getInTouchQuestions')}

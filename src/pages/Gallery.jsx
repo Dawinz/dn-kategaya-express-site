@@ -83,7 +83,7 @@ const Gallery = () => {
       <div style={{
         background: 'linear-gradient(135deg, #E10600, #FFD700, #0057FF)',
         color: 'white',
-        padding: '5rem 0',
+        padding: '2.5rem 0',
         textAlign: 'center'
       }}>
         <div style={{
@@ -92,17 +92,17 @@ const Gallery = () => {
           padding: '0 2rem'
         }}>
           <h1 style={{
-            fontSize: '3.5rem',
+            fontSize: '2.5rem',
             fontWeight: 'bold',
-            marginBottom: '1.5rem',
+            marginBottom: '0.75rem',
             textShadow: '0 2px 4px rgba(0,0,0,0.3)'
           }}>
             {t('ourGallery')}
           </h1>
           <p style={{
-            fontSize: '1.3rem',
+            fontSize: '1.1rem',
             opacity: 0.95,
-            lineHeight: 1.6
+            lineHeight: 1.5
           }}>
             {t('discoverFleet')}
           </p>
