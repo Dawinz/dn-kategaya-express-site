@@ -42,7 +42,7 @@ const Navbar = () => {
         alignItems: 'center'
       }}>
         {/* Logo */}
-        <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: isMobile ? '0.5rem' : '1rem' }}>
+        <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: isMobile ? '0.75rem' : '1rem' }}>
           <img
             src={`${window.location.origin}/images/logo.jpeg`}
             alt="DNKategaya Express Logo"
@@ -54,24 +54,23 @@ const Navbar = () => {
               boxShadow: isMobile ? '0 2px 8px rgba(0,0,0,0.15)' : 'none'
             }}
           />
-          <div style={{ textAlign: 'center' }}>
+          <div style={{ textAlign: isMobile ? 'left' : 'center', flex: 1 }}>
             <h1 style={{
-              fontSize: isMobile ? '1.5rem' : '1.5rem',
+              fontSize: isMobile ? '1.2rem' : '1.5rem',
               fontWeight: 'bold',
-              background: 'linear-gradient(135deg, #E10600, #FFD700, #0057FF)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-              margin: 0
+              color: '#E10600',
+              margin: 0,
+              lineHeight: '1.2'
             }}>
               DNKategaya Express
             </h1>
             <p style={{ 
-              fontSize: isMobile ? '0.9rem' : '0.8rem', 
-              color: '#666', 
-              margin: '2px 0 0 0',
+              fontSize: isMobile ? '0.7rem' : '0.8rem', 
+              color: '#555', 
+              margin: '4px 0 0 0',
               fontStyle: 'italic',
-              fontWeight: '500'
+              fontWeight: '400',
+              lineHeight: '1.3'
             }}>
               {t('yourJourneyPriority')}
             </p>
