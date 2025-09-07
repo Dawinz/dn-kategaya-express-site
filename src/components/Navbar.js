@@ -28,7 +28,7 @@ const Navbar = () => {
     <nav style={{
       background: 'white',
       boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
-      padding: isMobile ? '0.5rem 0' : '1rem 0',
+      padding: isMobile ? '0.5rem 0 1rem 0' : '1rem 0 1.5rem 0',
       position: 'sticky',
       top: 0,
       zIndex: 100
