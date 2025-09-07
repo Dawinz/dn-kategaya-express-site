@@ -15,7 +15,7 @@ const Routes = () => {
   ];
 
   return (
-    <div style={{ minHeight: '100vh', background: '#f8f9fa' }}>
+    <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #e8f4f8 0%, #f0f8ff 25%, #f5f5f5 50%, #e8f5e8 75%, #fff8e1 100%)' }}>
       {/* Header Section */}
       <div style={{
         background: 'linear-gradient(135deg, #E10600, #FFD700, #0057FF)',

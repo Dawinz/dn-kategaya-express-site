@@ -78,7 +78,7 @@ const Gallery = () => {
   };
 
   return (
-    <div style={{ minHeight: '100vh', background: '#f8f9fa' }}>
+    <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #f8f9fa 0%, #e3f2fd 25%, #f3e5f5 50%, #e8f5e8 75%, #fff3e0 100%)' }}>
       {/* Header Section */}
       <div style={{
         background: 'linear-gradient(135deg, #E10600, #FFD700, #0057FF)',
