@@ -53,7 +53,7 @@ const Navbar = () => {
               objectFit: 'cover'
             }}
           />
-          <div>
+          <div style={{ textAlign: 'center' }}>
             <h1 style={{
               fontSize: isMobile ? '1.2rem' : '1.5rem',
               fontWeight: 'bold',
@@ -65,11 +65,15 @@ const Navbar = () => {
             }}>
               DNKategaya Express
             </h1>
-            {!isMobile && (
-              <p style={{ fontSize: '0.8rem', color: '#666', margin: 0 }}>
-                {t('yourJourneyPriority')}
-              </p>
-            )}
+            <p style={{ 
+              fontSize: isMobile ? '0.7rem' : '0.8rem', 
+              color: '#666', 
+              margin: '2px 0 0 0',
+              fontStyle: 'italic',
+              fontWeight: '500'
+            }}>
+              {t('yourJourneyPriority')}
+            </p>
           </div>
         </Link>
 
