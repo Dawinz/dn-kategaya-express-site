@@ -36,11 +36,11 @@ const Hero = ({ setIsBookingDialogOpen }) => {
       backgroundRepeat: 'no-repeat',
       backgroundAttachment: 'scroll',
       color: 'white',
-      padding: isMobile ? '0.5rem 0' : '4rem 0',
+      padding: isMobile ? '0' : '4rem 0',
       textAlign: 'center',
       position: 'relative',
       overflow: 'hidden',
-      minHeight: isMobile ? '40vh' : '100vh',
+      minHeight: isMobile ? '100vh' : '100vh',
       width: '100%'
     }}>
       <div style={{
@@ -48,18 +48,19 @@ const Hero = ({ setIsBookingDialogOpen }) => {
         zIndex: 0,
         maxWidth: '1200px',
         margin: '0 auto',
-        padding: isMobile ? '0 1rem' : '0 2rem',
+        padding: isMobile ? '0' : '0 2rem',
         display: 'flex',
         justifyContent: isMobile ? 'center' : 'flex-end',
-        alignItems: isMobile ? 'flex-end' : 'center',
-        minHeight: isMobile ? '400px' : '400px',
-        paddingTop: isMobile ? '4rem' : '0'
+        alignItems: isMobile ? 'center' : 'center',
+        minHeight: isMobile ? '100vh' : '400px',
+        paddingTop: isMobile ? '0' : '0'
       }}>
         <div style={{
-          transform: isMobile ? 'scale(0.7)' : isTablet ? 'scale(0.8)' : 'scale(0.9)',
+          transform: isMobile ? 'scale(1)' : isTablet ? 'scale(0.8)' : 'scale(0.9)',
           transformOrigin: 'center',
           maxWidth: isMobile ? '100%' : '500px',
-          width: isMobile ? '100%' : 'auto'
+          width: isMobile ? '100%' : 'auto',
+          padding: isMobile ? '2rem 1rem' : '0'
         }}>
           <SearchForm setIsBookingDialogOpen={setIsBookingDialogOpen} />
         </div>

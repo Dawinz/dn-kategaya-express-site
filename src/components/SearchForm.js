@@ -180,7 +180,7 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
         borderRadius: '12px',
         boxShadow: '0 8px 20px rgba(0,0,0,0.15)',
         maxWidth: isMobile ? '100%' : '800px',
-        margin: '0 auto'
+        margin: isMobile ? '0' : '0 auto'
       }}>
       <form onSubmit={handleSubmit} style={{ marginBottom: '0' }}>
         <div style={{
