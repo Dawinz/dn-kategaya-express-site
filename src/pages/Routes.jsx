@@ -204,10 +204,21 @@ const Routes = () => {
             textAlign: 'center'
           }}>
             <div style={{
-              fontSize: '4rem',
-              marginBottom: '1rem'
+              marginBottom: '1rem',
+              display: 'flex',
+              justifyContent: 'center'
             }}>
-              🗺️
+              <img
+                src={`${window.location.origin}/images/routes-image.jpeg`}
+                alt="Route Network Map"
+                style={{
+                  maxWidth: '100%',
+                  height: 'auto',
+                  maxHeight: '300px',
+                  borderRadius: '8px',
+                  boxShadow: '0 4px 15px rgba(0,0,0,0.1)'
+                }}
+              />
             </div>
             <p style={{
               color: '#666',
