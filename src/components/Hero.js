@@ -36,11 +36,11 @@ const Hero = ({ setIsBookingDialogOpen }) => {
       backgroundRepeat: 'no-repeat',
       backgroundAttachment: 'scroll',
       color: 'white',
-      padding: isMobile ? '2rem 0' : '4rem 0',
+      padding: isMobile ? '1rem 0' : '4rem 0',
       textAlign: 'center',
       position: 'relative',
       overflow: 'hidden',
-      minHeight: isMobile ? '80vh' : '100vh',
+      minHeight: isMobile ? '60vh' : '100vh',
       width: '100%'
     }}>
       <div style={{
