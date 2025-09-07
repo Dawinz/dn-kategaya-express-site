@@ -56,7 +56,7 @@ const Navbar = () => {
           />
           <div style={{ textAlign: 'center' }}>
             <h1 style={{
-              fontSize: isMobile ? '1.3rem' : '1.5rem',
+              fontSize: isMobile ? '1.5rem' : '1.5rem',
               fontWeight: 'bold',
               background: 'linear-gradient(135deg, #E10600, #FFD700, #0057FF)',
               WebkitBackgroundClip: 'text',
@@ -67,7 +67,7 @@ const Navbar = () => {
               DNKategaya Express
             </h1>
             <p style={{ 
-              fontSize: isMobile ? '0.8rem' : '0.8rem', 
+              fontSize: isMobile ? '0.9rem' : '0.8rem', 
               color: '#666', 
               margin: '2px 0 0 0',
               fontStyle: 'italic',
