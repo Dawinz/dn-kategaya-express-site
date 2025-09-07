@@ -220,12 +220,6 @@ const Routes = () => {
                 }}
               />
             </div>
-            <p style={{
-              color: '#666',
-              fontSize: '1.1rem'
-            }}>
-              {t('interactiveMap')}
-            </p>
           </div>
         </div>
 
