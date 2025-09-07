@@ -196,7 +196,7 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
               fontWeight: 600,
               marginBottom: '0.4rem',
               color: 'white',
-              fontSize: isMobile ? '0.65rem' : '0.85rem'
+              fontSize: isMobile ? '0.8rem' : '0.85rem'
             }}>
               {t('from')}
             </label>
@@ -209,7 +209,7 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
                 padding: isMobile ? '0.6rem' : '0.6rem',
                 border: '2px solid transparent',
                 borderRadius: '8px',
-                fontSize: isMobile ? '0.65rem' : '0.9rem',
+                fontSize: isMobile ? '0.8rem' : '0.9rem',
                 transition: 'box-shadow 0.3s, transform 0.2s',
                 background: 'linear-gradient(white, white) padding-box, linear-gradient(135deg, #FFD700, #E10600) border-box',
                 boxShadow: '0 4px 12px rgba(0,0,0,0.06)'
@@ -229,7 +229,7 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
               fontWeight: 600,
               marginBottom: '0.4rem',
               color: 'white',
-              fontSize: isMobile ? '0.65rem' : '0.85rem'
+              fontSize: isMobile ? '0.8rem' : '0.85rem'
             }}>
               {t('to')}
             </label>
@@ -242,7 +242,7 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
                 padding: isMobile ? '0.6rem' : '0.75rem',
                 border: '2px solid transparent',
                 borderRadius: '10px',
-                fontSize: isMobile ? '0.65rem' : '1rem',
+                fontSize: isMobile ? '0.8rem' : '1rem',
                 transition: 'box-shadow 0.3s, transform 0.2s',
                 background: 'linear-gradient(white, white) padding-box, linear-gradient(135deg, #0057FF, #FFD700) border-box',
                 boxShadow: '0 6px 18px rgba(0,0,0,0.08)'
@@ -262,7 +262,7 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
               fontWeight: 600,
               marginBottom: '0.4rem',
               color: 'white',
-              fontSize: isMobile ? '0.65rem' : '0.85rem'
+              fontSize: isMobile ? '0.8rem' : '0.85rem'
             }}>
               {t('date')}
             </label>
@@ -277,7 +277,7 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
                 padding: isMobile ? '0.6rem' : '0.75rem',
                 border: '2px solid transparent',
                 borderRadius: '10px',
-                fontSize: isMobile ? '0.65rem' : '1rem',
+                fontSize: isMobile ? '0.8rem' : '1rem',
                 transition: 'box-shadow 0.3s, transform 0.2s',
                 background: 'linear-gradient(white, white) padding-box, linear-gradient(135deg, #E10600, #FFD700) border-box',
                 boxShadow: '0 6px 18px rgba(0,0,0,0.08)'
@@ -292,7 +292,7 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
               fontWeight: 600,
               marginBottom: '0.4rem',
               color: 'white',
-              fontSize: isMobile ? '0.65rem' : '0.85rem'
+              fontSize: isMobile ? '0.8rem' : '0.85rem'
             }}>
               {t('passengers')}
             </label>
@@ -305,7 +305,7 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
                 padding: isMobile ? '0.6rem' : '0.75rem',
                 border: '2px solid transparent',
                 borderRadius: '10px',
-                fontSize: isMobile ? '0.65rem' : '1rem',
+                fontSize: isMobile ? '0.8rem' : '1rem',
                 transition: 'box-shadow 0.3s, transform 0.2s',
                 background: 'linear-gradient(white, white) padding-box, linear-gradient(135deg, #FFD700, #0057FF) border-box',
                 boxShadow: '0 6px 18px rgba(0,0,0,0.08)'
@@ -345,7 +345,7 @@ const SearchForm = ({ setIsBookingDialogOpen, prefillData }) => {
               border: 'none',
               padding: isMobile ? '0.8rem 1.5rem' : '0.8rem 1.8rem',
               borderRadius: '999px',
-              fontSize: isMobile ? '0.75rem' : '1rem',
+              fontSize: isMobile ? '0.9rem' : '1rem',
               fontWeight: 700,
               cursor: isLoading ? 'not-allowed' : 'pointer',
               transition: 'transform 0.2s, box-shadow 0.3s',
