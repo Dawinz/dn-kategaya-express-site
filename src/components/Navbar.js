@@ -54,27 +54,29 @@ const Navbar = () => {
               boxShadow: isMobile ? '0 2px 8px rgba(0,0,0,0.15)' : 'none'
             }}
           />
-          <div style={{ textAlign: isMobile ? 'left' : 'center', flex: 1 }}>
-            <h1 style={{
-              fontSize: isMobile ? '1.2rem' : '1.5rem',
-              fontWeight: 'bold',
-              color: '#E10600',
-              margin: 0,
-              lineHeight: '1.2'
-            }}>
-              DNKategaya Express
-            </h1>
-            <p style={{ 
-              fontSize: isMobile ? '0.7rem' : '0.8rem', 
-              color: '#555', 
-              margin: '4px 0 0 0',
-              fontStyle: 'italic',
-              fontWeight: '400',
-              lineHeight: '1.3'
-            }}>
-              {t('yourJourneyPriority')}
-            </p>
-          </div>
+          {!isMobile && (
+            <div style={{ textAlign: 'center', flex: 1 }}>
+              <h1 style={{
+                fontSize: '1.5rem',
+                fontWeight: 'bold',
+                color: '#E10600',
+                margin: 0,
+                lineHeight: '1.2'
+              }}>
+                DNKategaya Express
+              </h1>
+              <p style={{ 
+                fontSize: '0.8rem', 
+                color: '#555', 
+                margin: '4px 0 0 0',
+                fontStyle: 'italic',
+                fontWeight: '400',
+                lineHeight: '1.3'
+              }}>
+                {t('yourJourneyPriority')}
+              </p>
+            </div>
+          )}
         </Link>
 
         {/* Desktop Navigation */}
