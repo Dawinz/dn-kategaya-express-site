@@ -8,11 +8,6 @@ const Gallery = () => {
 
   const galleryImages = [
     {
-      src: getImagePath(IMAGES.LOGO),
-      alt: 'DNKategaya Express Logo',
-      title: t('companyLogo')
-    },
-    {
       src: getImagePath(IMAGES.BUS_FLEET_1),
       alt: 'DNKategaya Express Bus Fleet',
       title: t('modernBusFleet')
@@ -66,6 +61,21 @@ const Gallery = () => {
       src: getImagePath(IMAGES.BUS_FLEET_11),
       alt: 'DNKategaya Express Bus Fleet Overview',
       title: t('fleetOverview')
+    },
+    {
+      src: getImagePath(IMAGES.BUS_FLEET_12),
+      alt: 'DNKategaya Express Bus Fleet 12',
+      title: t('modernBusFleet')
+    },
+    {
+      src: getImagePath(IMAGES.BUS_FLEET_13),
+      alt: 'DNKategaya Express Bus Fleet 13',
+      title: t('premiumBusExterior')
+    },
+    {
+      src: getImagePath(IMAGES.BUS_FLEET_14),
+      alt: 'DNKategaya Express Bus Fleet 14',
+      title: t('professionalService')
     }
   ];
 
