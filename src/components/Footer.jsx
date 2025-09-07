@@ -80,7 +80,7 @@ const Footer = () => {
                 margin: 0,
                 fontStyle: 'italic',
                 fontWeight: '500',
-                textAlign: isMobile ? 'center' : 'left'
+                textAlign: 'center'
               }}>
                 {t('yourJourneyPriority')}
               </p>
