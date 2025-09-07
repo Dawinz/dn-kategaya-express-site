@@ -14,7 +14,7 @@ const Home = ({ setIsBookingDialogOpen }) => {
       {/* Features Section */}
       <section style={{
         padding: '2rem 0',
-        background: 'white'
+        background: 'linear-gradient(135deg, #f8f9fa 0%, #ffffff 50%, #f1f3f4 100%)'
       }}>
         <div style={{
           maxWidth: '1200px',
@@ -47,9 +47,12 @@ const Home = ({ setIsBookingDialogOpen }) => {
             <div style={{
               textAlign: 'center',
               padding: '2rem',
-              border: '1px solid #e1e5e9',
+              background: 'rgba(255, 255, 255, 0.9)',
+              border: '1px solid rgba(225, 229, 233, 0.5)',
               borderRadius: '12px',
-              transition: 'transform 0.3s, box-shadow 0.3s'
+              boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)',
+              transition: 'transform 0.3s, box-shadow 0.3s',
+              backdropFilter: 'blur(10px)'
             }}>
               <div style={{
                 width: '60px',
@@ -82,9 +85,12 @@ const Home = ({ setIsBookingDialogOpen }) => {
             <div style={{
               textAlign: 'center',
               padding: '2rem',
-              border: '1px solid #e1e5e9',
+              background: 'rgba(255, 255, 255, 0.9)',
+              border: '1px solid rgba(225, 229, 233, 0.5)',
               borderRadius: '12px',
-              transition: 'transform 0.3s, box-shadow 0.3s'
+              boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)',
+              transition: 'transform 0.3s, box-shadow 0.3s',
+              backdropFilter: 'blur(10px)'
             }}>
               <div style={{
                 width: '60px',
@@ -117,9 +123,12 @@ const Home = ({ setIsBookingDialogOpen }) => {
             <div style={{
               textAlign: 'center',
               padding: '2rem',
-              border: '1px solid #e1e5e9',
+              background: 'rgba(255, 255, 255, 0.9)',
+              border: '1px solid rgba(225, 229, 233, 0.5)',
               borderRadius: '12px',
-              transition: 'transform 0.3s, box-shadow 0.3s'
+              boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)',
+              transition: 'transform 0.3s, box-shadow 0.3s',
+              backdropFilter: 'blur(10px)'
             }}>
               <div style={{
                 width: '60px',
@@ -153,7 +162,7 @@ const Home = ({ setIsBookingDialogOpen }) => {
 
       {/* Bus Images Section */}
       <section style={{
-        background: '#f8f9fa',
+        background: 'linear-gradient(135deg, #e3f2fd 0%, #f8f9fa 50%, #e8f5e8 100%)',
         padding: '2rem 0'
       }}>
         <div style={{
@@ -238,7 +247,7 @@ const Home = ({ setIsBookingDialogOpen }) => {
       {/* Popular Routes Section */}
       <section style={{
         padding: '2rem 0',
-        background: 'white'
+        background: 'linear-gradient(135deg, #fff3e0 0%, #ffffff 50%, #f3e5f5 100%)'
       }}>
         <div style={{
           maxWidth: '1200px',
@@ -274,13 +283,14 @@ const Home = ({ setIsBookingDialogOpen }) => {
               { from: "Mwanza", to: "Bukoba" }
             ].map((route, index) => (
               <div key={index} style={{
-                background: 'white',
+                background: 'rgba(255, 255, 255, 0.95)',
                 borderRadius: '12px',
                 padding: '1.5rem',
                 textAlign: 'center',
-                boxShadow: '0 5px 15px rgba(0,0,0,0.1)',
-                border: '1px solid #e1e5e9',
-                transition: 'transform 0.3s, box-shadow 0.3s'
+                boxShadow: '0 6px 25px rgba(0,0,0,0.12)',
+                border: '1px solid rgba(225, 229, 233, 0.6)',
+                transition: 'transform 0.3s, box-shadow 0.3s',
+                backdropFilter: 'blur(10px)'
               }}>
                 <div style={{
                   fontSize: '2rem',
@@ -320,7 +330,7 @@ const Home = ({ setIsBookingDialogOpen }) => {
       {/* Testimonials Section */}
       <section style={{
         padding: '2rem 0',
-        background: '#f8f9fa'
+        background: 'linear-gradient(135deg, #f1f8e9 0%, #f8f9fa 50%, #e0f2f1 100%)'
       }}>
         <div style={{
           maxWidth: '1200px',
@@ -350,10 +360,12 @@ const Home = ({ setIsBookingDialogOpen }) => {
             gap: '2rem'
           }}>
             <div style={{
-              background: 'white',
+              background: 'rgba(255, 255, 255, 0.95)',
               borderRadius: '12px',
               padding: '2rem',
-              boxShadow: '0 5px 15px rgba(0,0,0,0.1)'
+              boxShadow: '0 8px 30px rgba(0,0,0,0.12)',
+              border: '1px solid rgba(255, 255, 255, 0.2)',
+              backdropFilter: 'blur(10px)'
             }}>
               <div style={{
                 display: 'flex',
@@ -388,10 +400,12 @@ const Home = ({ setIsBookingDialogOpen }) => {
             </div>
 
             <div style={{
-              background: 'white',
+              background: 'rgba(255, 255, 255, 0.95)',
               borderRadius: '12px',
               padding: '2rem',
-              boxShadow: '0 5px 15px rgba(0,0,0,0.1)'
+              boxShadow: '0 8px 30px rgba(0,0,0,0.12)',
+              border: '1px solid rgba(255, 255, 255, 0.2)',
+              backdropFilter: 'blur(10px)'
             }}>
               <div style={{
                 display: 'flex',
@@ -426,10 +440,12 @@ const Home = ({ setIsBookingDialogOpen }) => {
             </div>
 
             <div style={{
-              background: 'white',
+              background: 'rgba(255, 255, 255, 0.95)',
               borderRadius: '12px',
               padding: '2rem',
-              boxShadow: '0 5px 15px rgba(0,0,0,0.1)'
+              boxShadow: '0 8px 30px rgba(0,0,0,0.12)',
+              border: '1px solid rgba(255, 255, 255, 0.2)',
+              backdropFilter: 'blur(10px)'
             }}>
               <div style={{
                 display: 'flex',
