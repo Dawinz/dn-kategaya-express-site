@@ -256,7 +256,7 @@ const translations = {
     from: 'KUTOKA',
     to: 'KWENDA',
     date: 'TAREHE YA SAFARI',
-    passengers: 'ABIRIA',
+    passengers: 'IDADI YA ABIRIA',
     
     // Booking Form
     selectSeats: 'CHAGUA VITI VYAKO',
@@ -372,7 +372,7 @@ const translations = {
     selectDeparture: 'Chagua kuondoka...',
     selectDestination: 'Chagua kwenda...',
     passenger: 'Abiria',
-    passengers: 'Abiria',
+    passengers: 'Idadi ya abiria',
     searchBookNow: '🔍 Tafuta na Wekesha Sasa',
     searching: 'Inatafuta...',
     tip: '💡 Kidokezo: Wekesha mapema kwa bei bora na uchaguzi wa viti',
