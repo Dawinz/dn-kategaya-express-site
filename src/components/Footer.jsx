@@ -44,17 +44,23 @@ const Footer = () => {
               marginBottom: '1rem',
               textAlign: 'center'
             }}>
-              <img
-                src={`${window.location.origin}/images/logo.jpeg`}
-                alt="DNKategaya Express Logo"
-                style={{
-                  width: isMobile ? '40px' : '50px',
-                  height: isMobile ? '40px' : '50px',
-                  borderRadius: '8px',
-                  objectFit: 'cover'
-                }}
-              />
-              <div>
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: isMobile ? '0.5rem' : '1rem',
+                flexDirection: isMobile ? 'column' : 'row',
+                textAlign: isMobile ? 'center' : 'left'
+              }}>
+                <img
+                  src={`${window.location.origin}/images/logo.jpeg`}
+                  alt="DNKategaya Express Logo"
+                  style={{
+                    width: isMobile ? '40px' : '50px',
+                    height: isMobile ? '40px' : '50px',
+                    borderRadius: '8px',
+                    objectFit: 'cover'
+                  }}
+                />
                 <h3 style={{
                   fontSize: isMobile ? '1.2rem' : '1.5rem',
                   fontWeight: 'bold',
@@ -66,16 +72,16 @@ const Footer = () => {
                 }}>
                   DNKategaya Express
                 </h3>
-                <p style={{ 
-                  fontSize: isMobile ? '0.7rem' : '0.8rem', 
-                  color: '#999', 
-                  margin: '2px 0 0 0',
-                  fontStyle: 'italic',
-                  fontWeight: '500'
-                }}>
-                  {t('yourJourneyPriority')}
-                </p>
               </div>
+              <p style={{ 
+                fontSize: isMobile ? '0.7rem' : '0.8rem', 
+                color: '#999', 
+                margin: 0,
+                fontStyle: 'italic',
+                fontWeight: '500'
+              }}>
+                {t('yourJourneyPriority')}
+              </p>
             </div>
             <p style={{
               color: '#ccc',
