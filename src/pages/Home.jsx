@@ -13,7 +13,7 @@ const Home = ({ setIsBookingDialogOpen }) => {
 
       {/* Features Section */}
       <section style={{
-        padding: '4rem 0',
+        padding: '2rem 0',
         background: 'white'
       }}>
         <div style={{
@@ -21,7 +21,7 @@ const Home = ({ setIsBookingDialogOpen }) => {
           margin: '0 auto',
           padding: '0 2rem'
         }}>
-          <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+          <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
             <h2 style={{
               fontSize: '2.5rem',
               fontWeight: 'bold',
@@ -154,14 +154,14 @@ const Home = ({ setIsBookingDialogOpen }) => {
       {/* Bus Images Section */}
       <section style={{
         background: '#f8f9fa',
-        padding: '4rem 0'
+        padding: '2rem 0'
       }}>
         <div style={{
           maxWidth: '1200px',
           margin: '0 auto',
           padding: '0 2rem'
         }}>
-          <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+          <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
             <h2 style={{
               fontSize: '2.5rem',
               fontWeight: 'bold',
@@ -237,7 +237,7 @@ const Home = ({ setIsBookingDialogOpen }) => {
 
       {/* Popular Routes Section */}
       <section style={{
-        padding: '4rem 0',
+        padding: '2rem 0',
         background: 'white'
       }}>
         <div style={{
@@ -245,7 +245,7 @@ const Home = ({ setIsBookingDialogOpen }) => {
           margin: '0 auto',
           padding: '0 2rem'
         }}>
-          <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+          <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
             <h2 style={{
               fontSize: '2.5rem',
               fontWeight: 'bold',
@@ -319,7 +319,7 @@ const Home = ({ setIsBookingDialogOpen }) => {
 
       {/* Testimonials Section */}
       <section style={{
-        padding: '4rem 0',
+        padding: '2rem 0',
         background: '#f8f9fa'
       }}>
         <div style={{
@@ -327,7 +327,7 @@ const Home = ({ setIsBookingDialogOpen }) => {
           margin: '0 auto',
           padding: '0 2rem'
         }}>
-          <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+          <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
             <h2 style={{
               fontSize: '2.5rem',
               fontWeight: 'bold',
