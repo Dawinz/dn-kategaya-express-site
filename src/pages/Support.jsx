@@ -114,10 +114,10 @@ const Support = () => {
                 Office Location
               </h3>
               <p style={{ color: '#666', marginBottom: '0.5rem' }}>
-                Visit our office in Dar es Salaam:
+                Visit our office in Karagwe:
               </p>
               <p style={{ color: '#333', fontWeight: '500' }}>
-                Dar es Salaam, Tanzania
+                Karagwe, Tanzania
               </p>
             </div>
           </div>
